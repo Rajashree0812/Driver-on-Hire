@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a professional driver with DriveEase. Real-time price calculator and instant driver confirmation.">
+  <title>Book a Driver – DriveEase Customer Dashboard</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232999E8'><path d='M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z'/></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- Fixed Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+          <div class="brand-logo-icon rounded-3 p-2 d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;">
+            <i class="bi bi-car-front-fill fs-5"></i>
+          </div>
+          <span class="navbar-brand-text text-white fs-4">Drive<span>Ease</span></span>
+        </a>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="sidebar-menu-title">Main Menu</li>
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">
+            <i class="bi bi-speedometer2"></i>
+            <span>Dashboard Overview</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="book-driver.html" class="nav-link active">
+            <i class="bi bi-calendar2-plus"></i>
+            <span>Book a Driver</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="my-bookings.html" class="nav-link">
+            <i class="bi bi-calendar-check"></i>
+            <span>My Bookings</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="driver-tracking.html" class="nav-link">
+            <i class="bi bi-geo-alt"></i>
+            <span>Track Assignment</span>
+          </a>
+        </li>
+
+        <li class="sidebar-menu-title">Financials</li>
+        <li class="nav-item">
+          <a href="invoices.html" class="nav-link">
+            <i class="bi bi-receipt"></i>
+            <span>Invoice List</span>
+          </a>
+        </li>
+
+        <li class="sidebar-menu-title">Preferences</li>
+        <li class="nav-item">
+          <a href="profile.html" class="nav-link">
+            <i class="bi bi-person"></i>
+            <span>Customer Profile</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="settings.html" class="nav-link">
+            <i class="bi bi-gear"></i>
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-user-footer">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Customer Avatar" class="sidebar-user-avatar current-user-avatar">
+        <div class="overflow-hidden">
+          <div class="fw-bold small text-white text-truncate current-user-name">Alex Morgan</div>
+          <div class="small text-white-50" style="font-size: 0.75rem;">Premium Member</div>
+        </div>
+        <a href="#" class="btn-do-logout ms-auto text-white-50 hover-text-white" title="Sign Out">
+          <i class="bi bi-box-arrow-right fs-5"></i>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-outline-secondary d-lg-none" id="sidebarToggleBtn" type="button" aria-label="Toggle Sidebar">
+            <i class="bi bi-list fs-5"></i>
+          </button>
+          <div class="d-none d-md-flex align-items-center gap-2 text-muted small">
+            <a href="index.html" class="text-decoration-none text-muted">Dashboard</a>
+            <i class="bi bi-chevron-right fs-6"></i>
+            <span class="text-primary fw-semibold">Book a Driver</span>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="switch-btn theme-toggle-btn" type="button" aria-label="Toggle Theme" title="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <button class="switch-btn rtl-toggle-btn" type="button" aria-label="Toggle RTL" title="Toggle RTL">
+            <span class="dir-label small fw-bold">LTR</span>
+          </button>
+
+          <div class="dropdown ms-2">
+            <button class="btn btn-sm d-flex align-items-center gap-2 p-1 border rounded-pill bg-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Avatar" class="rounded-circle current-user-avatar" style="width: 32px; height: 32px; object-fit: cover;">
+              <span class="small fw-bold d-none d-sm-inline me-1 current-user-name">Alex Morgan</span>
+              <i class="bi bi-chevron-down small text-muted me-1"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow">
+              <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2 text-primary"></i>My Profile</a></li>
+              <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2 text-secondary"></i>Account Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger btn-do-logout" href="#"><i class="bi bi-box-arrow-right me-2"></i>Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- Booking Wizard Form -->
+      <main class="dashboard-content">
+        <div class="mb-4">
+          <h3 class="fw-extrabold text-primary mb-1">Book a Professional Driver</h3>
+          <p class="text-muted small">Configure your route, driver service tier, and vehicle details with live pricing.</p>
+        </div>
+
+        <form id="driverBookingForm">
+          <div class="row g-4">
+            <!-- Left Form Fields Column -->
+            <div class="col-lg-8">
+              <!-- Route & Time Card -->
+              <div class="card-custom p-4 mb-4">
+                <h5 class="fw-bold mb-3 pb-2 border-bottom"><i class="bi bi-geo-alt-fill text-danger me-2"></i>1. Trip Route & Schedule</h5>
+                
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold text-muted">Pickup Location <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text bg-light text-primary"><i class="bi bi-record-circle"></i></span>
+                      <input type="text" id="pickupLocation" class="form-control" placeholder="e.g. 742 Park Avenue, Upper East Side, NY" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold text-muted">Destination Location <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text bg-light text-danger"><i class="bi bi-geo-alt"></i></span>
+                      <input type="text" id="dropLocation" class="form-control" placeholder="e.g. City Financial Center, Tower B" required>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <label class="form-label small fw-bold text-muted">Booking Date <span class="text-danger">*</span></label>
+                    <input type="date" id="bookingDate" class="form-control" value="2026-11-15" required>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label small fw-bold text-muted">Start Time <span class="text-danger">*</span></label>
+                    <input type="time" id="bookingTime" class="form-control" value="10:00" required>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label small fw-bold text-muted">Working Duration <span class="text-danger">*</span></label>
+                    <select id="bookingHours" class="form-select">
+                      <option value="2">2 Hours (Quick local trip)</option>
+                      <option value="4" selected>4 Hours (Half Day block)</option>
+                      <option value="6">6 Hours (Extended city errands)</option>
+                      <option value="8">8 Hours (Full Day block)</option>
+                      <option value="12">12 Hours (Outstation / All day)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Driver Category & Vehicle Card -->
+              <div class="card-custom p-4 mb-4">
+                <h5 class="fw-bold mb-3 pb-2 border-bottom"><i class="bi bi-person-badge text-secondary me-2"></i>2. Driver Category & Vehicle Preference</h5>
+
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold text-muted">Driver Service Category <span class="text-danger">*</span></label>
+                    <select id="bookingCategory" class="form-select">
+                      <option value="hourly">Hourly Driver ($22 / hr)</option>
+                      <option value="fullday">Full-Day Driver ($135 flat 8 hrs)</option>
+                      <option value="chauffeur" selected>Luxury Chauffeur ($45 / hr)</option>
+                      <option value="corporate">Corporate Delegation ($38 / hr)</option>
+                      <option value="airport">Airport Pickup & Drop ($49 flat)</option>
+                      <option value="outstation">Outstation Trip ($36 / hr)</option>
+                      <option value="event">Event & Party Driver ($32 / hr)</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold text-muted">Vehicle Type Preference</label>
+                    <select id="bookingVehicle" class="form-select">
+                      <option value="sedan" selected>Standard / Executive Sedan (+ $0)</option>
+                      <option value="suv">Luxury SUV (+ $20)</option>
+                      <option value="luxury">Prestige VIP Limousine (+ $45)</option>
+                      <option value="van">Multi-Passenger Van / MPV (+ $15)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Addons checkboxes -->
+                <label class="form-label small fw-bold text-muted mb-2">Optional Service Add-ons</label>
+                <div class="row g-2">
+                  <div class="col-sm-6">
+                    <div class="form-check p-2 border rounded bg-light">
+                      <input class="form-check-input ms-1 me-2 addon-checkbox" type="checkbox" value="Uniformed Chauffeur" id="addonUniform" checked>
+                      <label class="form-check-label small" for="addonUniform">
+                        <strong>Uniformed Chauffeur</strong> (+$12)<br>
+                        <span class="text-muted" style="font-size: 0.75rem;">Formal dark suit & tie standard</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="form-check p-2 border rounded bg-light">
+                      <input class="form-check-input ms-1 me-2 addon-checkbox" type="checkbox" value="Luggage Assistance" id="addonLuggage" checked>
+                      <label class="form-check-label small" for="addonLuggage">
+                        <strong>Luggage Handling</strong> (+$12)<br>
+                        <span class="text-muted" style="font-size: 0.75rem;">Baggage loading and door assist</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="form-check p-2 border rounded bg-light">
+                      <input class="form-check-input ms-1 me-2 addon-checkbox" type="checkbox" value="Multi-lingual Driver" id="addonLang">
+                      <label class="form-check-label small" for="addonLang">
+                        <strong>Multi-Lingual Chauffeur</strong> (+$12)<br>
+                        <span class="text-muted" style="font-size: 0.75rem;">Fluent in French / Spanish / Mandarin</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="form-check p-2 border rounded bg-light">
+                      <input class="form-check-input ms-1 me-2 addon-checkbox" type="checkbox" value="Express Toll Pass" id="addonToll">
+                      <label class="form-check-label small" for="addonToll">
+                        <strong>Express Route & Toll Pass</strong> (+$12)<br>
+                        <span class="text-muted" style="font-size: 0.75rem;">Priority fast-tag expressway lanes</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Special Instructions Card -->
+              <div class="card-custom p-4">
+                <h5 class="fw-bold mb-3 pb-2 border-bottom"><i class="bi bi-chat-text text-accent me-2"></i>3. Special Instructions</h5>
+                <textarea id="specialNotes" class="form-control" rows="3" placeholder="e.g. VIP guest arrival, please arrive 20 minutes early. Child booster seat needed in trunk."></textarea>
+              </div>
+            </div>
+
+            <!-- Right Sticky Price Breakdown Column -->
+            <div class="col-lg-4">
+              <div class="card-custom sticky-fare-summary p-4">
+                <h5 class="fw-bold mb-3 pb-2 border-bottom"><i class="bi bi-receipt-cutoff text-primary me-2"></i>Fare Summary</h5>
+
+                <div class="fare-summary-list mb-3">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fare-summary-label">Base Tier:</span>
+                    <strong class="fare-summary-val text-end" id="estimatedHoursNotice">4 hrs @ Luxury Chauffeur</strong>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fare-summary-label">Subtotal:</span>
+                    <strong class="fare-summary-val" id="priceSubtotal">$204.00</strong>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fare-summary-label">Service Tax (8%):</span>
+                    <strong class="fare-summary-val" id="priceTax">$16.32</strong>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center text-success mb-2">
+                    <span class="fare-summary-label text-success">Driver Insurance:</span>
+                    <strong class="fare-summary-val text-success">Free Included</strong>
+                  </div>
+                  <hr class="my-3 border-secondary-subtle">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="fare-summary-total-label fw-bold">Total Estimated Fare:</span>
+                    <span class="fare-summary-total-val fw-extrabold text-primary fs-4" id="priceTotal">$220.32</span>
+                  </div>
+                </div>
+
+                <div class="alert alert-light border small text-muted mb-4">
+                  <i class="bi bi-shield-check text-success me-1"></i>
+                  <strong>Zero Surge Guarantee:</strong> Transparent hourly billing with free cancellation up to 1 hour before scheduled pickup.
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg w-100 shadow mb-3">
+                  <i class="bi bi-check2-circle me-2"></i>Confirm & Reserve Driver
+                </button>
+
+                <div class="text-center small text-muted">
+                  <i class="bi bi-lock me-1"></i>Saved securely to your customer dashboard.
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+  <script src="../assets/js/validation.js"></script>
+  <script src="../assets/js/booking.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+  <!-- Pre-fill query parameters if navigated from home quick booking -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('pickup')) {
+        const p = document.getElementById('pickupLocation');
+        if (p) p.value = decodeURIComponent(params.get('pickup'));
+      }
+      if (params.get('drop')) {
+        const d = document.getElementById('dropLocation');
+        if (d) d.value = decodeURIComponent(params.get('drop'));
+      }
+      if (params.get('date')) {
+        const dt = document.getElementById('bookingDate');
+        if (dt) dt.value = params.get('date');
+      }
+      if (params.get('time')) {
+        const t = document.getElementById('bookingTime');
+        if (t) t.value = params.get('time');
+      }
+      if (params.get('category')) {
+        const cat = document.getElementById('bookingCategory');
+        if (cat) cat.value = params.get('category');
+      }
+      if (params.get('hours')) {
+        const hrs = document.getElementById('bookingHours');
+        if (hrs) hrs.value = params.get('hours');
+      }
+      // Re-trigger calculation
+      const cat = document.getElementById('bookingCategory');
+      if (cat) cat.dispatchEvent(new Event('change'));
+    });
+  </script>
+</body>
+</html>

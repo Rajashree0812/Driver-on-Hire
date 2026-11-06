@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DriveEase Journal - In-depth articles on driver screening, safety, road trip guides, and corporate transit protocols.">
+  <title id="blogPageTitle">Article Details – DriveEase Journal</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232999E8'><path d='M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z'/></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg py-3">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <div class="brand-logo-icon rounded-3 p-2 d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;">
+            <i class="bi bi-car-front-fill fs-4"></i>
+          </div>
+          <span class="navbar-brand-text">Drive<span>Ease</span></span>
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#blogDetailsNav" aria-controls="blogDetailsNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="blogDetailsNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-house me-2"></i>General Services</a></li>
+                <li><a class="dropdown-item" href="index-2.html"><i class="bi bi-stars me-2"></i>Luxury Chauffeur</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Services
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="services.html"><i class="bi bi-grid me-2"></i>All Services Overview</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard/index.html">Dashboard</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+            <button class="switch-btn theme-toggle-btn" type="button" aria-label="Toggle Theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <button class="switch-btn rtl-toggle-btn" type="button" aria-label="Toggle RTL">
+              <span class="dir-label small fw-bold">LTR</span>
+            </button>
+            <a href="auth/login.html" class="btn btn-nav-login btn-sm ms-1"><i class="bi bi-person me-1"></i>Login</a>
+            <a href="auth/register.html" class="btn btn-nav-register btn-sm ms-1"><i class="bi bi-person-plus me-1"></i>Register</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header Section with Left Blur & Right 4K Image -->
+  <section class="page-hero-banner position-relative overflow-hidden">
+    <!-- 4K Background Image Layer on Right -->
+    <div class="page-hero-bg" id="articleHeroBg" style="background-image: url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=3840&q=85');"></div>
+    
+    <!-- Seamless Dual-Tone Gradient Dissolve Overlay -->
+    <div class="page-hero-overlay"></div>
+    
+    <!-- Left-Edge Atmospheric Blur -->
+    <div class="page-hero-blur"></div>
+
+    <!-- Content Container -->
+    <div class="container position-relative" style="z-index: 3;">
+      <div class="row align-items-center">
+        <div class="col-lg-7 col-xl-6">
+          <div class="page-hero-badge" id="articleHeroBadge">
+            <i class="bi bi-shield-lock-fill me-2"></i>FEATURED EDITORIAL • SAFETY & VETTING
+          </div>
+          <h1 class="page-hero-title" id="articleHeroTitle">
+            Behind the Wheel: How We Screen 2,500+ Chauffeurs
+          </h1>
+          <p class="page-hero-desc" id="articleHeroDesc">
+            An exclusive inspection of our 6-pillar vetting framework, multi-jurisdiction police background verification, and behavioral hospitality audits ensuring complete peace of mind.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Body Section -->
+  <section class="py-5" id="articleContent">
+    <div class="container py-4">
+      <div class="row gy-5">
+        <!-- Main Article -->
+        <div class="col-lg-8">
+          <!-- Article Meta Header -->
+          <div class="d-flex flex-wrap align-items-center gap-3 mb-4 pb-3 border-bottom text-muted small">
+            <span><i class="bi bi-calendar3 me-1 text-primary"></i> <span id="articleDate">Nov 02, 2026</span></span>
+            <span><i class="bi bi-person me-1 text-secondary"></i> By <strong id="articleAuthor" class="text-dark">Gregory Miller</strong></span>
+            <span><i class="bi bi-clock me-1 text-warning"></i> <span id="articleReadTime">6 min read</span></span>
+            <span class="badge bg-secondary-subtle text-secondary-emphasis" id="articleBadgeTag">Safety & Vetting</span>
+          </div>
+
+          <!-- Featured 4K Image -->
+          <div class="rounded-4 overflow-hidden mb-4 shadow-sm" style="max-height: 440px;">
+            <img id="articleFeaturedImg" src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=2560&q=90" alt="Article Visual" class="w-100 h-100 object-fit-cover">
+          </div>
+
+          <!-- Dynamic Article HTML Content -->
+          <div class="article-content" id="articleBody" style="font-size: 1.05rem; line-height: 1.85;">
+            <!-- Injected by JavaScript -->
+          </div>
+
+          <!-- Social Share & Tags Bar (Horizontally Aligned, Matches Reference Image 2) -->
+          <div class="article-share-tags-bar d-flex flex-wrap justify-content-between align-items-center gap-3 py-3 my-4 border-top border-bottom">
+            <div class="d-flex align-items-center flex-wrap gap-2" id="articleTagsWrap">
+              <span class="fw-bold text-dark small me-1 d-inline-flex align-items-center"><i class="bi bi-tags-fill text-primary me-1"></i>Tags:</span>
+              <div id="articleTags" class="d-inline-flex flex-wrap gap-1 align-items-center">
+                <span class="badge badge-soft-secondary">Safety</span>
+                <span class="badge badge-soft-primary">Verification</span>
+                <span class="badge badge-soft-accent">Chauffeurs</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-2 flex-shrink-0 ms-auto" id="articleShareActions">
+              <span class="fw-bold text-dark small me-1">Share:</span>
+              <button class="btn btn-sm btn-outline-secondary rounded-circle d-inline-flex align-items-center justify-content-center share-btn" style="width: 34px; height: 34px;" title="Share on Twitter" onclick="window.showToast('Link Copied', 'Article link copied to clipboard for sharing!', 'info');"><i class="bi bi-twitter-x"></i></button>
+              <button class="btn btn-sm btn-outline-secondary rounded-circle d-inline-flex align-items-center justify-content-center share-btn" style="width: 34px; height: 34px;" title="Share on LinkedIn" onclick="window.showToast('Link Copied', 'Article link copied to clipboard for sharing!', 'info');"><i class="bi bi-linkedin"></i></button>
+              <button class="btn btn-sm btn-outline-secondary rounded-circle d-inline-flex align-items-center justify-content-center share-btn" style="width: 34px; height: 34px;" title="Share on Facebook" onclick="window.showToast('Link Copied', 'Article link copied to clipboard for sharing!', 'info');"><i class="bi bi-facebook"></i></button>
+            </div>
+          </div>
+
+          <!-- Author Bio Box -->
+          <div class="card-custom p-4 mb-5 d-flex flex-column flex-sm-row gap-3 align-items-center bg-light" id="articleAuthorBox">
+            <img id="authorImg" src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=400&q=85" alt="Author" class="rounded-circle" style="width: 80px; height: 80px; object-fit: cover;">
+            <div>
+              <h5 class="fw-bold mb-1" id="authorName">Written by Gregory Miller</h5>
+              <div class="small text-secondary fw-semibold mb-2" id="authorTitle">Head of Safety & Vetting at DriveEase</div>
+              <p class="small text-muted mb-0" id="authorBio">Gregory has overseen driver compliance and transport risk operations for over 18 years, having audited and vetted over 20,000 professional chauffeurs nationwide.</p>
+            </div>
+          </div>
+
+          <!-- Interactive Comments Section -->
+          <div class="card-custom p-4">
+            <h4 class="fw-bold mb-4"><i class="bi bi-chat-left-dots text-primary me-2"></i>Passenger Discussions (<span id="commentCount">2</span>)</h4>
+
+            <div class="d-flex flex-column gap-3 mb-4" id="commentsList">
+              <div class="d-flex gap-3 pb-3 border-bottom">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Elena Rodriguez" class="rounded-circle flex-shrink-0" style="width: 46px; height: 46px; object-fit: cover;">
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <strong class="text-dark">Elena Rodriguez</strong>
+                    <span class="small text-muted">• 2 days ago</span>
+                  </div>
+                  <p class="small text-muted mb-0">
+                    The difference in chauffeur vetting is truly palpable. When I had an outstation trip last month, our driver David drove with such calm precision through heavy highway rain. It completely validated why you vet so thoroughly.
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex gap-3 pb-3 border-bottom">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Marcus Sterling" class="rounded-circle flex-shrink-0" style="width: 46px; height: 46px; object-fit: cover;">
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <strong class="text-dark">Harrison Forde</strong>
+                    <span class="small text-muted">• 5 days ago</span>
+                  </div>
+                  <p class="small text-muted mb-0">
+                    Very impressed with the operational standards and etiquette expectations. It creates a serene mobile work environment that makes travel time genuinely productive.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Leave a Comment Form -->
+            <h5 class="fw-bold mb-3">Leave a Reply</h5>
+            <form id="commentForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold text-muted">Your Name</label>
+                  <input type="text" id="commentAuthor" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold text-muted">Email Address</label>
+                  <input type="email" id="commentEmail" class="form-control" placeholder="e.g. sarah@example.com" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label small fw-bold text-muted">Your Comment</label>
+                  <textarea id="commentMessage" class="form-control" rows="4" placeholder="Share your experience or inquiry..." required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-accent px-4 shadow-sm">
+                    <i class="bi bi-send-fill me-1"></i>Post Comment
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <!-- Categories -->
+          <div class="card-custom p-4 mb-4">
+            <h5 class="fw-bold mb-3 pb-2 border-bottom"><i class="bi bi-folder2-open text-primary me-2"></i>Categories</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex justify-content-between py-2 border-bottom">
+                <a href="blog.html" class="text-muted text-decoration-none">Safety & Verification</a>
+                <span class="badge bg-light text-dark">14</span>
+              </li>
+              <li class="d-flex justify-content-between py-2 border-bottom">
+                <a href="blog.html" class="text-muted text-decoration-none">Outstation Road Trips</a>
+                <span class="badge bg-light text-dark">28</span>
+              </li>
+              <li class="d-flex justify-content-between py-2 border-bottom">
+                <a href="blog.html" class="text-muted text-decoration-none">Corporate & VIP Transit</a>
+                <span class="badge bg-light text-dark">19</span>
+              </li>
+              <li class="d-flex justify-content-between py-2 border-bottom">
+                <a href="blog.html" class="text-muted text-decoration-none">Luxury EV Driving Tips</a>
+                <span class="badge bg-light text-dark">11</span>
+              </li>
+              <li class="d-flex justify-content-between pt-2">
+                <a href="blog.html" class="text-muted text-decoration-none">Airport & Flight Protocols</a>
+                <span class="badge bg-light text-dark">8</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Recent Articles with Safety & Vetting Badges -->
+          <div class="card-custom p-4 mb-4">
+            <h5 class="fw-bold mb-3 pb-2 border-bottom"><i class="bi bi-clock-history text-secondary me-2"></i>Recent Articles</h5>
+            
+            <div class="d-flex gap-3 mb-3 pb-3 border-bottom align-items-center">
+              <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=300&q=85" alt="Safety and Vetting" class="rounded-3" style="width: 70px; height: 70px; object-fit: cover;">
+              <div>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis small mb-1" style="font-size: 0.72rem;">Safety & Vetting</span>
+                <a href="blog-details.html?id=screening" class="fw-bold small text-dark hover-text-primary d-block mb-1">Behind the Wheel: How We Screen 2,500+ Chauffeurs</a>
+                <span class="small text-muted"><i class="bi bi-calendar3 me-1"></i>Nov 02, 2026</span>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3 mb-3 pb-3 border-bottom align-items-center">
+              <img src="https://images.unsplash.com/photo-1506015391300-4802dc74de2e?auto=format&fit=crop&w=300&q=85" alt="Road Trips" class="rounded-3" style="width: 70px; height: 70px; object-fit: cover;">
+              <div>
+                <span class="badge bg-primary-subtle text-primary small mb-1" style="font-size: 0.72rem;">Road Trips</span>
+                <a href="blog-details.html?id=road-trips" class="fw-bold small text-dark hover-text-primary d-block mb-1">Top 7 Scenic Highway Trips in 2026</a>
+                <span class="small text-muted"><i class="bi bi-calendar3 me-1"></i>Oct 28, 2026</span>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3 mb-3 pb-3 border-bottom align-items-center">
+              <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=300&q=85" alt="Corporate Transit" class="rounded-3" style="width: 70px; height: 70px; object-fit: cover;">
+              <div>
+                <span class="badge bg-success-subtle text-success small mb-1" style="font-size: 0.72rem;">Corporate</span>
+                <a href="blog-details.html?id=corporate" class="fw-bold small text-dark hover-text-primary d-block mb-1">Corporate Chauffeur Hire & Executive Productivity</a>
+                <span class="small text-muted"><i class="bi bi-calendar3 me-1"></i>Oct 19, 2026</span>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3 align-items-center">
+              <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=300&q=85" alt="EV Driving" class="rounded-3" style="width: 70px; height: 70px; object-fit: cover;">
+              <div>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis small mb-1" style="font-size: 0.72rem;">Safety & Vetting</span>
+                <a href="blog-details.html?id=ev-driving" class="fw-bold small text-dark hover-text-primary d-block mb-1">Handling Luxury EVs: Trained Driver Standards</a>
+                <span class="small text-muted"><i class="bi bi-calendar3 me-1"></i>Oct 11, 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Promo Banner -->
+          <div class="card-custom bg-primary text-white p-4 text-center">
+            <i class="bi bi-steering fs-1 text-warning mb-2"></i>
+            <h5 class="fw-bold text-white mb-2">Experience The Standard</h5>
+            <p class="small text-white-50 mb-3">Reserve an accredited, background-verified chauffeur in minutes.</p>
+            <a href="dashboard/book-driver.html" class="btn btn-accent w-100 shadow">Book a Driver Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Col 1: Brand & Socials -->
+        <div class="col-lg-3 col-md-6">
+          <a class="navbar-brand d-flex align-items-center gap-2 mb-3 text-decoration-none" href="index.html">
+            <div class="brand-logo-icon rounded-3 p-2 d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;">
+              <i class="bi bi-car-front-fill fs-4"></i>
+            </div>
+            <span class="navbar-brand-text">Drive<span>Ease</span></span>
+          </a>
+          <p class="footer-desc mb-4">
+            Professional driver on hire services for personal, corporate, and luxury travelers nationwide.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="blog.html">Blog & Insights</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html?type=hourly">Hourly Driver</a></li>
+            <li><a href="service-details.html?type=personal">Personal Driver</a></li>
+            <li><a href="service-details.html?type=corporate">Corporate Driver</a></li>
+            <li><a href="service-details.html?type=airport">Airport Pickup</a></li>
+            <li><a href="service-details.html?type=outstation">Outstation Driver</a></li>
+            <li><a href="service-details.html?type=chauffeur">Luxury Chauffeur</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Dispatch Hotlines -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5>Dispatch Desk</h5>
+          <ul class="footer-links">
+            <li><span class="text-white-50">Toll-Free Helpline</span></li>
+            <li><strong class="text-white">+1 (800) 555-DRIVE</strong></li>
+            <li class="mt-2"><span class="text-white-50">VIP Concierge</span></li>
+            <li><strong class="text-white">+1 (800) 555-VIP7</strong></li>
+            <li class="mt-2"><span class="badge bg-success">24/7 Available</span></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Email Inquiries & Hotline -->
+        <div class="col-lg-3 col-md-6 col-12">
+          <h5>Email Inquiries</h5>
+          <div class="footer-contact-box">
+            <div class="d-flex align-items-start gap-2 mb-2">
+              <i class="bi bi-envelope-at-fill text-warning mt-1 fs-5"></i>
+              <div>
+                <span class="small d-block text-muted">General Support</span>
+                <a href="mailto:support@driveease.com" class="fw-bold footer-contact-link">support@driveease.com</a>
+              </div>
+            </div>
+            <div class="d-flex align-items-start gap-2 mb-3">
+              <i class="bi bi-briefcase-fill text-primary mt-1 fs-5"></i>
+              <div>
+                <span class="small d-block text-muted">Corporate Contracts</span>
+                <a href="mailto:corporate@driveease.com" class="fw-bold footer-contact-link">corporate@driveease.com</a>
+              </div>
+            </div>
+            <div class="pt-2 border-top border-secondary-subtle">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-telephone-fill text-success fs-5"></i>
+                <div>
+                  <span class="small d-block text-muted">24/7 Hotline</span>
+                  <a href="tel:+18005553748" class="fw-bold footer-contact-link">+1 (800) 555-DRIVE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom text-center">
+        <div>
+          &copy; 2026 <strong>DriveEase Technologies Inc.</strong> All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Dynamic Blog Article Loader Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const articlesData = {
+        screening: {
+          title: "Behind the Wheel: How We Screen Over 2,500 Professional Drivers",
+          heroBadge: '<i class="bi bi-shield-lock-fill me-2"></i>FEATURED EDITORIAL • SAFETY & VETTING',
+          badgeTag: 'Safety & Vetting',
+          date: "Nov 02, 2026",
+          author: "Gregory Miller",
+          authorTitle: "Head of Safety & Vetting at DriveEase",
+          authorBio: "Gregory has overseen driver compliance and transport risk operations for over 18 years, having audited and vetted over 20,000 professional chauffeurs nationwide.",
+          authorImg: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=400&q=85",
+          readTime: "6 min read",
+          heroImg: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=3840&q=85",
+          heroDesc: "An exclusive inspection of our 6-pillar vetting framework, multi-jurisdiction police background verification, and behavioral hospitality audits ensuring complete peace of mind.",
+          featuredImg: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=2560&q=90",
+          tags: ["Safety", "Verification", "Chauffeurs", "Background Check"],
+          bodyHtml: `
+            <p class="lead fw-normal text-muted">
+              When you hand over the keys to your personal automobile—whether it is a beloved family SUV or an executive German sedan—you are not merely hiring a set of driving hands. You are placing your physical safety, your valuable property, and your family's tranquility into someone else's care.
+            </p>
+
+            <h3 class="fw-bold text-primary mt-4 mb-3">The Genesis of the 6-Pillar Scrutiny</h3>
+            <p class="text-muted">
+              In an era where gig-economy ride hailing often relies on minimal automated background scraping, DriveEase set out with a contrasting ethos: <strong>White-Glove Trust Above All</strong>. Over the last eight years, we have evaluated more than 35,000 driver applicants. Fewer than 7% are ultimately approved and granted active dispatch status on our platform.
+            </p>
+
+            <blockquote class="p-4 my-4 rounded-3 border-start border-4 border-secondary bg-light text-dark fst-italic">
+              "A truly great chauffeur is someone who drives so smoothly that the passenger never feels the acceleration, the deceleration, or the turns. It requires instinct, patience, and rigorous conditioning."
+              <footer class="blockquote-footer mt-2 text-muted">Arthur Sterling, Director of Chauffeur Instruction</footer>
+            </blockquote>
+
+            <h4 class="fw-bold text-primary mt-4 mb-3">1. Criminal & Court Verifications</h4>
+            <p class="text-muted">
+              We partner with accredited screening agencies to conduct nationwide criminal record index queries, county courthouse searches across every jurisdiction where the applicant has resided for the past 10 years, and federal registry cross-referencing. Any recorded felony or misdemeanor involving reckless endangerment results in instantaneous disqualification.
+            </p>
+
+            <h4 class="fw-bold text-primary mt-4 mb-3">2. In-Cabin Road Examination</h4>
+            <p class="text-muted">
+              Paperwork is never enough. Every candidate must complete an intensive 90-minute real-world road exam alongside a senior DriveEase fleet inspector. The test evaluates:
+            </p>
+            <ul class="text-muted">
+              <li><strong>Progressive Braking:</strong> Stopping the vehicle with zero perceptible forward passenger jolt.</li>
+              <li><strong>Blind Spot Vigilance:</strong> Physical head checks paired with mirror awareness.</li>
+              <li><strong>Chassis Care:</strong> Gentle maneuvering over speed humps and road potholes to protect customer suspensions.</li>
+              <li><strong>High-Speed Highway Merging:</strong> Confident, predictable lane signaling and speed matching.</li>
+            </ul>
+
+            <h4 class="fw-bold text-primary mt-4 mb-3">3. Passenger Etiquette & Confidentiality</h4>
+            <p class="text-muted">
+              Our chauffeurs understand that discretion is sacred. Whether you are conducting quarterly earnings calls, discussing family arrangements, or resting with your eyes closed after an arduous flight, our drivers are instructed to respect your space, maintain a peaceful cabin ambiance, and never solicit personal conversation unless initiated by you.
+            </p>
+          `
+        },
+        'road-trips': {
+          title: "Top 7 Scenic Highway Road Trips You Must Experience in 2026",
+          heroBadge: '<i class="bi bi-signpost-split-fill me-2"></i>TRAVEL JOURNAL • ROAD TRIPS',
+          badgeTag: 'Road Trips',
+          date: "Oct 28, 2026",
+          author: "Elena Vance",
+          authorTitle: "Travel Mobility Specialist at DriveEase",
+          authorBio: "Elena has charted thousands of interstate driving miles across coastal highways and mountain passes, helping families plan memorable, stress-free road trip adventures.",
+          authorImg: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
+          readTime: "8 min read",
+          heroImg: "https://images.unsplash.com/photo-1506015391300-4802dc74de2e?auto=format&fit=crop&w=3840&q=85",
+          heroDesc: "Why hiring a dedicated highway driver turns an exhausting long drive into an enjoyable family vacation with zero driver fatigue and unforgettable panoramic sights.",
+          featuredImg: "https://images.unsplash.com/photo-1506015391300-4802dc74de2e?auto=format&fit=crop&w=2560&q=90",
+          tags: ["Road Trips", "Outstation", "Scenic Routes", "Highway Safety"],
+          bodyHtml: `
+            <p class="lead fw-normal text-muted">
+              There is an undeniable romance to the open highway—the thrill of watching desert canyon silhouettes dissolve into coastal cliffs, the aroma of pine needles drifting through open windows, and the timeless joy of traveling together as a family. Yet all too often, the designated family driver arrives at the resort exhausted, tense from navigating semi-truck lanes, and ready for bed rather than celebration.
+            </p>
+
+            <h3 class="fw-bold text-primary mt-4 mb-3">Transforming The Driver Seat into A Passenger Lounge</h3>
+            <p class="text-muted">
+              When you hire a certified DriveEase highway chauffeur for your personal SUV or crossover, you liberate everyone in the vehicle to participate in the journey. Rather than staring tensely at tail lights for 8 hours, the family can play games, stream movies, take panoramic photographs, or enjoy undisturbed conversations.
+            </p>
+
+            <blockquote class="p-4 my-4 rounded-3 border-start border-4 border-primary bg-light text-dark fst-italic">
+              "The most memorable vacations are the ones where nobody had to check their blood pressure after a six-hour drive. Outstation chauffeurs make road trips feel like first-class private rail."
+              <footer class="blockquote-footer mt-2 text-muted">Elena Vance, Travel Mobility Specialist</footer>
+            </blockquote>
+
+            <h4 class="fw-bold text-primary mt-4 mb-3">1. Pacific Coast Highway (California State Route 1)</h4>
+            <p class="text-muted">
+              Carving dramatically along rugged Pacific cliffs between Monterey and Big Sur, SR 1 offers some of the most breathtaking ocean views on earth. However, with steep sheer drop-offs and tight hairpin bends, it requires constant concentration. Having a veteran chauffeur allows you to gaze out at passing whale migrations and historic arch bridges with total peace of mind.
+            </p>
+
+            <h4 class="fw-bold text-primary mt-4 mb-3">2. Blue Ridge Parkway (Virginia to North Carolina)</h4>
+            <p class="text-muted">
+              Spanning 469 miles of Appalachian mountain crests, this slow-paced scenic byway features dense autumn foliage, mist-shrouded valleys, and heritage overlooks. Our drivers know exactly where the paved scenic turnouts are and adapt easily to misty mountain conditions and sudden wildlife crossings.
+            </p>
+
+            <h4 class="fw-bold text-primary mt-4 mb-3">3. Red Rock Scenic Byway (Sedona, Arizona)</h4>
+            <p class="text-muted">
+              A vibrant journey through prehistoric sandstone formations and crimson buttes. Beat the harsh desert heat by having your chauffeur coordinate parking at trailhead viewpoints and maintaining an icy, air-conditioned vehicle interior waiting for you after short hikes.
+            </p>
+
+            <h4 class="fw-bold text-primary mt-4 mb-3">4. Highway Safety Protocols for Interstate Journeys</h4>
+            <p class="text-muted">
+              Every DriveEase outstation driver follows strict mandatory safety routines: a 15-minute break every 3 hours of highway driving, adherence to posted speed limits, continuous tire pressure monitoring, and verified defensive steering techniques that guarantee your family's protection.
+            </p>
+          `
+        },
+        corporate: {
+          title: "Corporate Chauffeur Hire: Maximizing Executive Productivity on the Go",
+          heroBadge: '<i class="bi bi-briefcase-fill me-2"></i>ENTERPRISE TRANSIT • CORPORATE',
+          badgeTag: 'Corporate',
+          date: "Oct 19, 2026",
+          author: "Arthur Sterling",
+          authorTitle: "Director of Chauffeur Instruction at DriveEase",
+          authorBio: "Arthur is a master defensive driving instructor certified by international road safety academies with over 20 years in executive security transport.",
+          authorImg: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
+          readTime: "7 min read",
+          heroImg: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=3840&q=85",
+          heroDesc: "Turn commute hours into strategic work sessions with our strictly confidential and punctual corporate driver assignments designed for board roadshows and executive travel.",
+          featuredImg: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=2560&q=90",
+          tags: ["Corporate", "Executive Chauffeur", "Business Transit", "Productivity", "Confidentiality"],
+          bodyHtml: `
+            <p class="lead fw-normal text-muted">
+              In modern corporate enterprise, time is the single most constrained resource. When high-performing executives spend 90 to 120 minutes each day gripping a steering wheel in gridlocked downtown traffic or circling conference center parking structures, hundreds of productive work hours are lost each quarter.
+            </p>
+
+            <h3 class="fw-bold text-primary mt-4 mb-3">The Executive Cabin as a Mobile Office</h3>
+            <p class="text-muted">
+              By transitioning from driving to being chauffeured in your personal luxury vehicle, transit time transforms immediately into high-focus billable work hours. With an experienced chauffeur navigating bottlenecks, checking real-time traffic bypasses, and managing curbside passenger drop-offs, leaders can review confidential merger briefings, host investor calls, or draft board memoranda uninterrupted.
+            </p>
+
+            <blockquote class="p-4 my-4 rounded-3 border-start border-4 border-success bg-light text-dark fst-italic">
+              "An executive's mental clarity is too valuable to be exhausted by traffic friction. A corporate chauffeur doesn't just drive; they protect your focus, your schedule, and your confidential conversations."
+              <footer class="blockquote-footer mt-2 text-muted">Arthur Sterling, Director of Chauffeur Instruction</footer>
+            </blockquote>
+
+            <h4 class="fw-bold text-primary mt-4 mb-3">1. Absolute Confidentiality Under NDA</h4>
+            <p class="text-muted">
+              Corporate clients frequently discuss sensitive business arrangements, earnings metrics, and patent strategies while riding in the passenger cabin. Every DriveEase corporate chauffeur signs rigorous, legally binding nondisclosure agreements. Cabin discretion is maintained at all times, with chauffeurs trained to never participate in or react to passenger discussions.
+            </p>
+
+            <h4 class="fw-bold text-primary mt-4 mb-3">2. Punctuality as a Non-Negotiable Core</h4>
+            <p class="text-muted">
+              Missing a board meeting or summit keynote is unacceptable. Corporate chauffeurs check in 20 minutes before departure, study multiple alternate routes, monitor live city transit sensors, and maintain direct communications with client executive assistants to ensure seamless transitions between corporate headquarters and airport terminals.
+            </p>
+
+            <h4 class="fw-bold text-primary mt-4 mb-3">3. Streamlined Corporate Billing & Multi-City Fleets</h4>
+            <p class="text-muted">
+              DriveEase simplifies administration with enterprise accounts offering unified GST invoicing, detailed mileage audit trails, and consistent chauffeur standards across 45 metropolitan markets nationwide.
+            </p>
+          `
+        },
+        'ev-driving': {
+          title: "Handling Luxury EVs: Why Modern Electric Cars Demand Trained Drivers",
+          heroBadge: '<i class="bi bi-shield-check me-2"></i>INNOVATION & SAFETY • SAFETY & VETTING',
+          badgeTag: 'Safety & Vetting',
+          date: "Oct 11, 2026",
+          author: "Sebastian Drake",
+          authorTitle: "Senior EV Fleet Instructor at DriveEase",
+          authorBio: "Sebastian specializes in advanced electric vehicle dynamics, battery optimization, and regenerative braking modulation across premium EV platforms.",
+          authorImg: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=200&q=80",
+          readTime: "5 min read",
+          heroImg: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=3840&q=85",
+          heroDesc: "From instant torque management to smooth regenerative braking, how our drivers master electric prestige sedans and SUVs for whisper-quiet passenger journeys.",
+          featuredImg: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=2560&q=90",
+          tags: ["Safety & Vetting", "Electric Vehicles", "EV Dynamics", "Luxury Sedans"],
+          bodyHtml: `
+            <p class="lead fw-normal text-muted">
+              The rapid proliferation of high-performance electric vehicles—from the Porsche Taycan and Lucid Air to the Mercedes EQS and Tesla Model S—has revolutionized automotive comfort. Yet these vehicles possess fundamentally distinct driving physics compared to conventional internal combustion engines.
+            </p>
+
+            <h3 class="fw-bold text-primary mt-4 mb-3">Why Traditional Drivers Struggle with Electric Cars</h3>
+            <p class="text-muted">
+              Electric motors deliver 100% of their peak torque instantaneously at zero RPM. Drivers accustomed to gasoline transmissions often apply jerky throttle inputs that cause jarring passenger whiplash. Compounding this is <strong>one-pedal regenerative braking</strong>: when a driver suddenly releases the accelerator, the car decelerates abruptly, inducing motion sickness for rear-seat passengers trying to read or work on laptops.
+            </p>
+
+            <blockquote class="p-4 my-4 rounded-3 border-start border-4 border-warning bg-light text-dark fst-italic">
+              "Mastering an EV requires gentle feathering rather than on/off throttle inputs. A well-trained chauffeur harnesses regenerative braking so seamlessly that stops feel as effortless as coasting into a cloud."
+              <footer class="blockquote-footer mt-2 text-muted">Sebastian Drake, Senior EV Fleet Instructor</footer>
+            </blockquote>
+
+            <h4 class="fw-bold text-primary mt-4 mb-3">1. Progressive Regenerative Deceleration</h4>
+            <p class="text-muted">
+              At DriveEase, all drivers assigned to electric vehicles complete specialized EV modulation courses. Chauffeurs practice feathering the throttle pedal to gently blend regenerative drag into hydraulic friction brakes, creating a smooth deceleration curve with zero forward passenger head-bob.
+            </p>
+
+            <h4 class="fw-bold text-primary mt-4 mb-3">2. DC Fast-Charging Protocol & Battery Care</h4>
+            <p class="text-muted">
+              A premium EV should never arrive at your pickup location with a critically depleted battery. Our chauffeurs understand battery pre-conditioning cycles, CCS and NACS connector handling, optimal 20%-80% state-of-charge preservation, and high-speed highway charging stop planning.
+            </p>
+
+            <h4 class="fw-bold text-primary mt-4 mb-3">3. Preserving Vehicle Range & Suspension Grace</h4>
+            <p class="text-muted">
+              Due to substantial battery pack weight, luxury EVs exert higher curb weights over chassis bushings and low-profile performance tires. Our chauffeurs take speed humps and bridge expansion joints with deliberate care, safeguarding your vehicle's expensive air suspension while optimizing real-world driving range.
+            </p>
+          `
+        }
+      };
+
+      // Read ?id= from URL
+      const params = new URLSearchParams(window.location.search);
+      const articleKey = params.get('id') || 'screening';
+      const article = articlesData[articleKey] || articlesData.screening;
+
+      // Update Page Meta
+      document.title = `${article.title} – DriveEase Journal`;
+      const metaTitle = document.getElementById('blogPageTitle');
+      if (metaTitle) metaTitle.textContent = `${article.title} – DriveEase Journal`;
+
+      // Update Hero Banner
+      const heroBg = document.getElementById('articleHeroBg');
+      if (heroBg) heroBg.style.backgroundImage = `url('${article.heroImg}')`;
+
+      const heroBadge = document.getElementById('articleHeroBadge');
+      if (heroBadge) heroBadge.innerHTML = article.heroBadge;
+
+      const heroTitle = document.getElementById('articleHeroTitle');
+      if (heroTitle) heroTitle.textContent = article.title;
+
+      const heroDesc = document.getElementById('articleHeroDesc');
+      if (heroDesc) heroDesc.textContent = article.heroDesc;
+
+      // Update Metadata Bar
+      const articleDate = document.getElementById('articleDate');
+      if (articleDate) articleDate.textContent = article.date;
+
+      const articleAuthor = document.getElementById('articleAuthor');
+      if (articleAuthor) articleAuthor.textContent = article.author;
+
+      const articleReadTime = document.getElementById('articleReadTime');
+      if (articleReadTime) articleReadTime.textContent = article.readTime;
+
+      const articleBadgeTag = document.getElementById('articleBadgeTag');
+      if (articleBadgeTag) articleBadgeTag.textContent = article.badgeTag;
+
+      // Update Featured Image
+      const featuredImg = document.getElementById('articleFeaturedImg');
+      if (featuredImg) {
+        featuredImg.src = article.featuredImg;
+        featuredImg.alt = article.title;
+      }
+
+      // Update Body
+      const articleBody = document.getElementById('articleBody');
+      if (articleBody) articleBody.innerHTML = article.bodyHtml;
+
+      // Update Tags
+      const tagsContainer = document.getElementById('articleTags');
+      if (tagsContainer) {
+        tagsContainer.innerHTML = article.tags.map(t => `<span class="badge badge-soft-secondary">${t}</span>`).join('');
+      }
+
+      // Update Author Box
+      const authorImg = document.getElementById('authorImg');
+      if (authorImg) authorImg.src = article.authorImg;
+
+      const authorName = document.getElementById('authorName');
+      if (authorName) authorName.textContent = `Written by ${article.author}`;
+
+      const authorTitle = document.getElementById('authorTitle');
+      if (authorTitle) authorTitle.textContent = article.authorTitle;
+
+      const authorBio = document.getElementById('authorBio');
+      if (authorBio) authorBio.textContent = article.authorBio;
+
+      // Interactive Comment Handling
+      const commentForm = document.getElementById('commentForm');
+      const commentsList = document.getElementById('commentsList');
+      const commentCount = document.getElementById('commentCount');
+      let currentComments = 2;
+
+      if (commentForm && commentsList) {
+        commentForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const nameInput = document.getElementById('commentAuthor');
+          const msgInput = document.getElementById('commentMessage');
+          const name = nameInput.value.trim();
+          const msg = msgInput.value.trim();
+
+          if (!name || !msg) return;
+
+          const commentEl = document.createElement('div');
+          commentEl.className = 'd-flex gap-3 pb-3 border-bottom animate-fade-in';
+          commentEl.innerHTML = `
+            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center flex-shrink-0 fw-bold" style="width: 46px; height: 46px;">
+              ${name.charAt(0).toUpperCase()}
+            </div>
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <strong class="text-dark">${name}</strong>
+                <span class="small text-muted">• Just now</span>
+              </div>
+              <p class="small text-muted mb-0">${msg}</p>
+            </div>
+          `;
+
+          commentsList.appendChild(commentEl);
+          currentComments++;
+          if (commentCount) commentCount.textContent = currentComments;
+          commentForm.reset();
+          if (window.showToast) {
+            window.showToast('Comment Published', 'Thank you! Your reply has been added to the discussion.', 'success');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

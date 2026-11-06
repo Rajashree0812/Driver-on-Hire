@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DriveEase - Professional driver on hire services. Book verified, background-checked personal, corporate, outstation, and luxury chauffeur drivers on demand.">
+  <meta name="keywords" content="driver on hire, personal driver, hourly driver, corporate chauffeur, airport pickup, verified drivers">
+  <meta name="author" content="DriveEase">
+  <meta property="og:title" content="DriveEase - Reliable Drivers, Wherever You Need Them">
+  <meta property="og:description" content="Hire professional drivers on an hourly, daily, or monthly basis. 100% background checked.">
+  <meta property="og:type" content="website">
+  
+  <title>DriveEase – Reliable Drivers, Wherever You Need Them | Professional Driver on Hire</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E5A93C'><path d='M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z'/></svg>">
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Template CSS Files -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Main Navigation Bar -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg py-3">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <div class="brand-logo-icon rounded-3 p-2 d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;">
+            <i class="bi bi-car-front-fill fs-4"></i>
+          </div>
+          <span class="navbar-brand-text">Drive<span>Ease</span></span>
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-house me-2"></i>General Services</a></li>
+                <li><a class="dropdown-item" href="index-2.html"><i class="bi bi-stars me-2"></i>Luxury Chauffeur</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Services
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="services.html"><i class="bi bi-grid me-2"></i>All Services Overview</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard/index.html">Dashboard</a></li>
+          </ul>
+
+          <!-- Action Buttons & Switchers -->
+          <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+            <!-- Theme Toggle (No floating tooltip text) -->
+            <button class="switch-btn theme-toggle-btn" type="button" aria-label="Toggle Dark / Light Theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+
+            <!-- RTL / LTR Toggle -->
+            <button class="switch-btn rtl-toggle-btn" type="button" aria-label="Toggle RTL / LTR">
+              <span class="dir-label small fw-bold">LTR</span>
+            </button>
+
+            <!-- Login Button -->
+            <a href="auth/login.html" class="btn btn-nav-login btn-sm ms-1">
+              <i class="bi bi-person me-1"></i>Login
+            </a>
+
+            <!-- Register Button -->
+            <a href="auth/register.html" class="btn btn-nav-register btn-sm ms-1">
+              <i class="bi bi-person-plus me-1"></i>Register
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Page Top Hero Section (Matches Sample Reference Layout) -->
+  <section class="page-hero-banner position-relative overflow-hidden">
+    <!-- Exact 4K Hero Background Image on Right: Suited Chauffeur Welcoming Passenger (Driver on Hire) -->
+    <div class="page-hero-bg" style="background-image: url('assets/images/hero-home.webp');"></div>
+    
+    <!-- Seamless Dual-Tone Gradient Dissolve Overlay -->
+    <div class="page-hero-overlay"></div>
+    
+    <!-- Left-Edge Atmospheric Blur -->
+    <div class="page-hero-blur"></div>
+
+    <!-- Content Container -->
+    <div class="container position-relative" style="z-index: 3;">
+      <div class="row align-items-center">
+        <div class="col-lg-8 col-xl-7">
+          <div class="page-hero-badge">
+            <i class="bi bi-shield-check me-2"></i>#1 RATED DRIVER ON HIRE PLATFORM • NATIONWIDE
+          </div>
+          <h1 class="page-hero-title">
+            Reliable Drivers.<br>
+            Wherever You Need.
+          </h1>
+          <p class="page-hero-desc">
+            Hire background-verified, punctual, and courteous drivers for your daily commute, family outings, corporate travel, or late-night events. Relax in your own vehicle while our professional chauffeurs take the wheel.
+          </p>
+
+          <!-- Single Hero Action Button (Explore Services) -->
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="services.html" class="btn btn-outline-primary btn-lg">
+              <i class="bi bi-compass me-2"></i>Explore Services
+            </a>
+          </div>
+
+          <!-- Trust Badges & Metrics Strip -->
+          <div class="home-trust-markers pt-3 mt-3 d-flex flex-wrap gap-4">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-shield-check text-warning fs-5"></i>
+              <span>100% Background-Verified Chauffeurs</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-globe2 text-warning fs-5"></i>
+              <span>500+ Cities Nationwide &amp; Outstation</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-award-fill text-warning fs-5"></i>
+              <span>99.8% On-Time Precision &amp; Zero Delay</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Booking Form Section -->
+  <section class="container pb-5">
+    <div class="booking-quick-box">
+      <div class="row align-items-center mb-3 g-2">
+        <div class="col-md-7">
+          <h4 class="mb-1 fw-bold text-primary d-flex align-items-center"><i class="bi bi-lightning-charge-fill text-warning me-2 fs-5"></i>Quick Driver Reservation</h4>
+          <p class="mb-0 text-muted small">Select your trip details below for instant driver dispatch and price estimation.</p>
+        </div>
+        <div class="col-md-5 text-md-end mt-2 mt-md-0">
+          <span class="badge badge-soft-success py-2 px-3"><i class="bi bi-shield-fill-check me-1"></i>No Hidden Surge Charges</span>
+        </div>
+      </div>
+
+      <form id="quickBookingForm">
+        <div class="row g-3 align-items-end">
+          <div class="col-xl-3 col-lg-6 col-md-6">
+            <label class="booking-form-label"><i class="bi bi-geo-alt-fill text-primary"></i> Pickup Location</label>
+            <input type="text" id="quickPickup" class="form-control" placeholder="e.g. 120 Grand Ave, Downtown" required>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-md-6">
+            <label class="booking-form-label"><i class="bi bi-pin-map-fill text-danger"></i> Destination</label>
+            <input type="text" id="quickDrop" class="form-control" placeholder="e.g. JFK Airport Terminal 4" required>
+          </div>
+          <div class="col-xl-2 col-lg-4 col-sm-6">
+            <label class="booking-form-label"><i class="bi bi-calendar-event text-secondary"></i> Booking Date</label>
+            <input type="date" id="quickDate" class="form-control" value="2026-11-10" required>
+          </div>
+          <div class="col-xl-2 col-lg-4 col-sm-6">
+            <label class="booking-form-label"><i class="bi bi-clock text-info"></i> Start Time</label>
+            <input type="time" id="quickTime" class="form-control" value="09:00" required>
+          </div>
+          <div class="col-xl-2 col-lg-4 col-sm-12">
+            <label class="booking-form-label"><i class="bi bi-person-badge text-accent"></i> Driver Type</label>
+            <select id="quickCategory" class="form-select">
+              <option value="hourly" selected>Hourly ($22 / hr)</option>
+              <option value="fullday">Full-Day ($135 / day)</option>
+              <option value="chauffeur">Chauffeur ($45 / hr)</option>
+              <option value="corporate">Corporate ($38 / hr)</option>
+              <option value="airport">Airport ($49 flat)</option>
+              <option value="outstation">Outstation ($36 / hr)</option>
+              <option value="monthly">Monthly ($1,450 / mo)</option>
+            </select>
+          </div>
+          <div class="col-12 mt-4 text-center">
+            <button type="submit" class="btn btn-primary btn-lg px-5 shadow">
+              <i class="bi bi-arrow-right-circle me-2"></i>Calculate Fare &amp; Proceed to Booking
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Our Services Section -->
+  <section class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center section-header">
+        <span class="section-subtitle"><i class="bi bi-stars"></i> What We Offer</span>
+        <h2 class="section-title">Comprehensive Driver Hire Services</h2>
+        <p class="section-desc">From daily errands and airport runs to executive business tours and long outstation road trips, our chauffeurs cater to every travel requirement.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Service 1 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card position-relative" onclick="window.location.href='service-details.html?type=hourly'">
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=2560&q=90" alt="Hourly Driver Service" class="service-img-thumb">
+            <div class="service-icon-box">
+              <i class="bi bi-clock-history"></i>
+            </div>
+            <h5 class="fw-bold"><a href="service-details.html?type=hourly" class="text-decoration-none text-dark hover-text-primary stretched-link">Hourly Driver Service</a></h5>
+            <p class="small text-muted">Hire on-demand drivers by the hour for local city commuting, shopping trips, hospital visits, and flexible errands.</p>
+            <div class="service-card-price">
+              <span>From $22 <small class="text-muted fw-normal">/ hr</small></span>
+              <span class="btn btn-sm btn-outline-primary"><i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card position-relative" onclick="window.location.href='service-details.html?type=personal'">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=2560&q=90" alt="Personal Driver on Hire" class="service-img-thumb">
+            <div class="service-icon-box" style="background: rgba(255, 155, 66, 0.1); color: var(--accent);">
+              <i class="bi bi-person-heart"></i>
+            </div>
+            <h5 class="fw-bold"><a href="service-details.html?type=personal" class="text-decoration-none text-dark hover-text-primary stretched-link">Personal Driver on Hire</a></h5>
+            <p class="small text-muted">Dedicated personal chauffeur trained to drive your family vehicles safely, assisting seniors, children, and daily schedules.</p>
+            <div class="service-card-price">
+              <span>From $120 <small class="text-muted fw-normal">/ day</small></span>
+              <span class="btn btn-sm btn-outline-primary"><i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card position-relative" onclick="window.location.href='service-details.html?type=corporate'">
+            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=3840&q=90" alt="Corporate Driver Service" class="service-img-thumb">
+            <div class="service-icon-box" style="background: rgba(16, 185, 129, 0.1); color: var(--success);">
+              <i class="bi bi-briefcase-fill"></i>
+            </div>
+            <h5 class="fw-bold"><a href="service-details.html?type=corporate" class="text-decoration-none text-dark hover-text-primary stretched-link">Corporate Driver Service</a></h5>
+            <p class="small text-muted">Discreet, smartly dressed executive drivers for corporate delegations, VIP guests, board members, and roadshows.</p>
+            <div class="service-card-price">
+              <span>From $38 <small class="text-muted fw-normal">/ hr</small></span>
+              <span class="btn btn-sm btn-outline-primary"><i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card position-relative" onclick="window.location.href='service-details.html?type=airport'">
+            <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?auto=format&fit=crop&w=2560&q=90" alt="Airport Pickup" class="service-img-thumb">
+            <div class="service-icon-box" style="background: rgba(14, 165, 233, 0.1); color: var(--info);">
+              <i class="bi bi-airplane-fill"></i>
+            </div>
+            <h5 class="fw-bold"><a href="service-details.html?type=airport" class="text-decoration-none text-dark hover-text-primary stretched-link">Airport Pickup & Drop</a></h5>
+            <p class="small text-muted">Punctual airport transfers with flight tracking, luggage loading assistance, and warm meet-and-greet curbside service.</p>
+            <div class="service-card-price">
+              <span>From $49 <small class="text-muted fw-normal">/ flat</small></span>
+              <span class="btn btn-sm btn-outline-primary"><i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card position-relative" onclick="window.location.href='service-details.html?type=outstation'">
+            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=2560&q=90" alt="Outstation Driver" class="service-img-thumb">
+            <div class="service-icon-box">
+              <i class="bi bi-signpost-split-fill"></i>
+            </div>
+            <h5 class="fw-bold"><a href="service-details.html?type=outstation" class="text-decoration-none text-dark hover-text-primary stretched-link">Outstation Driver Service</a></h5>
+            <p class="small text-muted">Highway-certified experienced drivers for interstate holidays, mountain trips, and multi-city weekend excursions.</p>
+            <div class="service-card-price">
+              <span>From $36 <small class="text-muted fw-normal">/ hr</small></span>
+              <span class="btn btn-sm btn-outline-primary"><i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card position-relative" onclick="window.location.href='service-details.html?type=event'">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=2560&q=90" alt="Event Driver" class="service-img-thumb">
+            <div class="service-icon-box" style="background: rgba(245, 158, 11, 0.1); color: var(--warning);">
+              <i class="bi bi-balloon-fill"></i>
+            </div>
+            <h5 class="fw-bold"><a href="service-details.html?type=event" class="text-decoration-none text-dark hover-text-primary stretched-link">Event & Party Driver</a></h5>
+            <p class="small text-muted">Celebrate without worries. Have a designated driver steer you and your guests safely home after night parties and weddings.</p>
+            <div class="service-card-price">
+              <span>From $32 <small class="text-muted fw-normal">/ hr</small></span>
+              <span class="btn btn-sm btn-outline-primary"><i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 7 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card position-relative" onclick="window.location.href='service-details.html?type=chauffeur'">
+            <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=2560&q=90" alt="Luxury Chauffeur" class="service-img-thumb">
+            <div class="service-icon-box" style="background: rgba(20, 43, 73, 0.1); color: var(--primary);">
+              <i class="bi bi-gem"></i>
+            </div>
+            <h5 class="fw-bold"><a href="service-details.html?type=chauffeur" class="text-decoration-none text-dark hover-text-primary stretched-link">Luxury Chauffeur Service</a></h5>
+            <p class="small text-muted">Top-tier chauffeurs in crisp uniform adept at handling premium luxury sedans like Mercedes-Benz, BMW, Bentley, and Rolls-Royce.</p>
+            <div class="service-card-price">
+              <span>From $45 <small class="text-muted fw-normal">/ hr</small></span>
+              <span class="btn btn-sm btn-outline-primary"><i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 8 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card position-relative" onclick="window.location.href='service-details.html?type=monthly'">
+            <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=2560&q=90" alt="Monthly Driver" class="service-img-thumb">
+            <div class="service-icon-box" style="background: rgba(41, 153, 232, 0.1); color: var(--secondary);">
+              <i class="bi bi-calendar-check-fill"></i>
+            </div>
+            <h5 class="fw-bold"><a href="service-details.html?type=monthly" class="text-decoration-none text-dark hover-text-primary stretched-link">Monthly Dedicated Driver</a></h5>
+            <p class="small text-muted">Permanent full-time monthly driver with free replacement guarantee, leave backups, and zero long-term employee liabilities.</p>
+            <div class="service-card-price">
+              <span>From $1,450 <small class="text-muted fw-normal">/ mo</small></span>
+              <span class="btn btn-sm btn-outline-primary"><i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="services.html" class="btn btn-outline-primary btn-lg px-4">
+          View All Services & Comparison Details <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-5">
+          <span class="section-subtitle"><i class="bi bi-shield-check"></i> Unrivaled Standards</span>
+          <h2 class="section-title">Why 25,000+ Vehicle Owners Trust DriveEase</h2>
+          <p class="text-muted mb-4">
+            We don’t just supply drivers; we provide total peace of mind. Every chauffeur undergoes exhaustive background screening, psychometric evaluation, and practical defensive driving road tests before ever touching a customer's steering wheel.
+          </p>
+
+          <div class="d-flex flex-column gap-3">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="rounded-circle bg-primary text-white p-2 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 44px; height: 44px;">
+                <i class="bi bi-fingerprint fs-5 text-warning"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Rigorous 6-Step Verification</h6>
+                <p class="small text-muted mb-0">Criminal history checks, national driving record checks, identity verification, drug screening, and home address visits.</p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3 align-items-start">
+              <div class="rounded-circle bg-secondary text-white p-2 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 44px; height: 44px;">
+                <i class="bi bi-stopwatch fs-5"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Guaranteed Punctuality</h6>
+                <p class="small text-muted mb-0">Our drivers reach 15 minutes prior to your requested start time. If delayed by more than 10 minutes, your first hour is on us.</p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3 align-items-start">
+              <div class="rounded-circle bg-accent text-dark p-2 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 44px; height: 44px;">
+                <i class="bi bi-currency-dollar fs-5 text-dark fw-bold"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Clear Transparent Pricing</h6>
+                <p class="small text-muted mb-0">Zero hidden surcharges, zero unexpected night peak multipliers. You pay exactly the rate estimated prior to confirmation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="row g-4">
+            <div class="col-sm-6">
+              <div class="card-custom h-100 p-4">
+                <i class="bi bi-person-bounding-box fs-1 text-primary mb-3"></i>
+                <h5 class="fw-bold">Defensive Driving Trained</h5>
+                <p class="small text-muted mb-0">Certified in collision avoidance, smooth braking, wet weather navigation, and gentle cornering for total passenger comfort.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card-custom h-100 p-4">
+                <i class="bi bi-gear-wide-connected fs-1 text-secondary mb-3"></i>
+                <h5 class="fw-bold">All Transmission Expertise</h5>
+                <p class="small text-muted mb-0">Proficient with manual sticks, dual-clutch automatics, luxury tiptronics, hybrid regenerative drives, and high-performance EVs.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card-custom h-100 p-4">
+                <i class="bi bi-headset fs-1 text-accent mb-3"></i>
+                <h5 class="fw-bold">24/7 Operations Control</h5>
+                <p class="small text-muted mb-0">Our round-the-clock dispatch desk monitors active trips and assists with instant schedule modifications or emergency swaps.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card-custom h-100 p-4">
+                <i class="bi bi-award-fill fs-1 text-success mb-3"></i>
+                <h5 class="fw-bold">Comprehensive Insurance Cover</h5>
+                <p class="small text-muted mb-0">Every booking comes backed with secondary accidental vehicle damage liability and passenger protection insurance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center section-header">
+        <span class="section-subtitle"><i class="bi bi-diagram-3"></i> Seamless Process</span>
+        <h2 class="section-title">How To Hire A Driver In 4 Steps</h2>
+        <p class="section-desc">Experience frictionless booking on your smartphone or desktop in under two minutes.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="step-card">
+            <div class="step-number step-number-1">1</div>
+            <h5 class="fw-bold">Choose Service & Time</h5>
+            <p class="small text-muted mb-0">Pick your category (hourly, daily, outstation) and specify your pickup location and timing.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="step-card">
+            <div class="step-number step-number-2">2</div>
+            <h5 class="fw-bold">Instant Price Quote</h5>
+            <p class="small text-muted mb-0">Review clear, transparent rates calculated based on your planned working hours and vehicle type.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="step-card">
+            <div class="step-number step-number-3">3</div>
+            <h5 class="fw-bold">Chauffeur Assigned</h5>
+            <p class="small text-muted mb-0">Receive driver profile, contact credentials, ratings, and track their arrival progress live.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="step-card">
+            <div class="step-number step-number-4">4</div>
+            <h5 class="fw-bold">Sit Back & Relax</h5>
+            <p class="small text-muted mb-0">Hand over your car keys to our verified professional and enjoy a relaxing, safe commute.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Drivers Profiles Preview -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="d-flex flex-wrap justify-content-between align-items-end mb-4 section-header">
+        <div>
+          <span class="section-subtitle"><i class="bi bi-people-fill"></i> Our Fleet Talent</span>
+          <h2 class="section-title mb-0">Meet Our Certified Chauffeurs</h2>
+        </div>
+        <a href="dashboard/book-driver.html" class="btn btn-outline-primary mt-3 mt-md-0">
+          Book Any Driver <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+
+      <div class="row g-4">
+        <!-- Driver 1 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="driver-card">
+            <div class="driver-img-wrap">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=85" alt="Robert Vance" class="driver-img">
+              <span class="driver-badge-verified"><i class="bi bi-check-circle-fill"></i> Verified</span>
+              <span class="driver-rate-badge">$25 / hr</span>
+            </div>
+            <div class="driver-body">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="fw-bold mb-0">Robert Vance</h5>
+                <span class="text-warning small fw-bold"><i class="bi bi-star-fill me-1"></i>4.95</span>
+              </div>
+              <p class="text-muted small mb-2"><i class="bi bi-briefcase me-1"></i>9+ Yrs Driving Experience</p>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="badge badge-soft-primary small">Luxury Sedans</span>
+                <span class="badge badge-soft-secondary small">VIP Chauffeur</span>
+              </div>
+              <a href="dashboard/book-driver.html?driver=Robert+Vance" class="btn btn-sm btn-primary w-100">
+                <i class="bi bi-calendar-plus me-1"></i>Book Robert
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Driver 2 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="driver-card">
+            <div class="driver-img-wrap">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1200&q=85" alt="Marcus Sterling" class="driver-img">
+              <span class="driver-badge-verified"><i class="bi bi-check-circle-fill"></i> Verified</span>
+              <span class="driver-rate-badge">$22 / hr</span>
+            </div>
+            <div class="driver-body">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="fw-bold mb-0">Marcus Sterling</h5>
+                <span class="text-warning small fw-bold"><i class="bi bi-star-fill me-1"></i>4.88</span>
+              </div>
+              <p class="text-muted small mb-2"><i class="bi bi-briefcase me-1"></i>7+ Yrs Driving Experience</p>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="badge badge-soft-primary small">Airport Transfers</span>
+                <span class="badge badge-soft-secondary small">SUVs & EVs</span>
+              </div>
+              <a href="dashboard/book-driver.html?driver=Marcus+Sterling" class="btn btn-sm btn-primary w-100">
+                <i class="bi bi-calendar-plus me-1"></i>Book Marcus
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Driver 3 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="driver-card">
+            <div class="driver-img-wrap">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=85" alt="David Chen" class="driver-img">
+              <span class="driver-badge-verified"><i class="bi bi-check-circle-fill"></i> Verified</span>
+              <span class="driver-rate-badge">$24 / hr</span>
+            </div>
+            <div class="driver-body">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="fw-bold mb-0">David Chen</h5>
+                <span class="text-warning small fw-bold"><i class="bi bi-star-fill me-1"></i>4.92</span>
+              </div>
+              <p class="text-muted small mb-2"><i class="bi bi-briefcase me-1"></i>11+ Yrs Driving Experience</p>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="badge badge-soft-primary small">Corporate</span>
+                <span class="badge badge-soft-secondary small">English & Mandarin</span>
+              </div>
+              <a href="dashboard/book-driver.html?driver=David+Chen" class="btn btn-sm btn-primary w-100">
+                <i class="bi bi-calendar-plus me-1"></i>Book David
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Driver 4 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="driver-card">
+            <div class="driver-img-wrap">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=85" alt="Liam O’Connor" class="driver-img">
+              <span class="driver-badge-verified"><i class="bi bi-check-circle-fill"></i> Verified</span>
+              <span class="driver-rate-badge">$28 / hr</span>
+            </div>
+            <div class="driver-body">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="fw-bold mb-0">Liam O’Connor</h5>
+                <span class="text-warning small fw-bold"><i class="bi bi-star-fill me-1"></i>4.98</span>
+              </div>
+              <p class="text-muted small mb-2"><i class="bi bi-briefcase me-1"></i>14+ Yrs Driving Experience</p>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="badge badge-soft-primary small">Highway / Mountain</span>
+                <span class="badge badge-soft-secondary small">Outstation Specialist</span>
+              </div>
+              <a href="dashboard/book-driver.html?driver=Liam+OConnor" class="btn btn-sm btn-primary w-100">
+                <i class="bi bi-calendar-plus me-1"></i>Book Liam
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Counter Section -->
+  <section class="py-5 bg-primary text-white">
+    <div class="container py-3">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-lg-3">
+          <div class="counter-box">
+            <div class="counter-value text-white" data-target="25000" data-suffix="+">25,000+</div>
+            <div class="counter-label text-white-50">Safe Trips Completed</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="counter-box">
+            <div class="counter-value text-warning" data-target="2500" data-suffix="+">2,500+</div>
+            <div class="counter-label text-white-50">Verified Active Drivers</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="counter-box">
+            <div class="counter-value text-white" data-target="99" data-suffix="%">99%</div>
+            <div class="counter-label text-white-50">Punctuality Score</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="counter-box">
+            <div class="counter-value text-warning" data-target="45" data-suffix="+">45+</div>
+            <div class="counter-label text-white-50">Metropolitan Cities</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Preview Section -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="text-center section-header">
+        <span class="section-subtitle"><i class="bi bi-tags"></i> Transparent Packages</span>
+        <h2 class="section-title">Clear & Competitive Pricing</h2>
+        <p class="section-desc">Sample demo rates for individuals and enterprises. No hidden fuel surcharges or surprise billing.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Basic Plan -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card">
+            <h4 class="fw-bold mb-1">Hourly Driver</h4>
+            <p class="text-muted small mb-3">Best for short errands, doctors visits & dinner dates</p>
+            <div class="mb-3">
+              <span class="pricing-amount">$22</span>
+              <span class="pricing-period">/ hour (min 2 hrs)</span>
+            </div>
+            <hr class="my-2">
+            <ul class="pricing-features-list">
+              <li><i class="bi bi-check-circle-fill text-success"></i> Background verified driver</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> City navigation & traffic expert</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> Customer vehicle care</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> Free cancellation up to 1 hr prior</li>
+              <li class="disabled"><i class="bi bi-x-circle text-muted"></i> Highway toll pass included</li>
+              <li class="disabled"><i class="bi bi-x-circle text-muted"></i> Uniformed executive chauffeur</li>
+            </ul>
+            <a href="dashboard/book-driver.html?category=hourly" class="btn btn-outline-primary w-100 mt-auto">Book Hourly Plan</a>
+          </div>
+        </div>
+
+        <!-- Standard Plan (Featured) -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card featured">
+            <span class="popular-ribbon">Most Popular</span>
+            <h4 class="fw-bold mb-1">Half-Day Package</h4>
+            <p class="text-muted small mb-3">Ideal for business meetings, weddings & shopping tours</p>
+            <div class="mb-3">
+              <span class="pricing-amount text-secondary">$80</span>
+              <span class="pricing-period">/ 4 hours block</span>
+            </div>
+            <hr class="my-2">
+            <ul class="pricing-features-list">
+              <li><i class="bi bi-check-circle-fill text-success"></i> Verified premium driver</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> Multi-stop routing included</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> Waiting time included in hours</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> Punctuality guarantee badge</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> Luggage handling assistance</li>
+              <li class="disabled"><i class="bi bi-x-circle text-muted"></i> Interstate permit handling</li>
+            </ul>
+            <a href="dashboard/book-driver.html?category=hourly&hours=4" class="btn btn-primary w-100 mt-auto shadow">Book Half-Day Plan</a>
+          </div>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card">
+            <h4 class="fw-bold mb-1">Full-Day Driver</h4>
+            <p class="text-muted small mb-3">Designed for full corporate days, road trips & VIP guests</p>
+            <div class="mb-3">
+              <span class="pricing-amount">$135</span>
+              <span class="pricing-period">/ 8 hours block</span>
+            </div>
+            <hr class="my-2">
+            <ul class="pricing-features-list">
+              <li><i class="bi bi-check-circle-fill text-success"></i> Senior executive chauffeur</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> Formal dark uniform standard</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> Unlimited city stops</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> Highway & expressway certified</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> Priority dispatch hotline</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> Extra hours at reduced $18/hr</li>
+            </ul>
+            <a href="dashboard/book-driver.html?category=fullday" class="btn btn-outline-primary w-100 mt-auto">Book Full-Day Plan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials -->
+  <section class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center section-header">
+        <span class="section-subtitle"><i class="bi bi-chat-quote-fill"></i> Client Feedback</span>
+        <h2 class="section-title">What Our Travelers Say</h2>
+        <p class="section-desc">Real stories from corporate executives, busy parents, and luxury vehicle owners.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card h-100">
+            <div class="d-flex text-warning mb-3">
+              <i class="bi bi-star-fill me-1"></i><i class="bi bi-star-fill me-1"></i><i class="bi bi-star-fill me-1"></i><i class="bi bi-star-fill me-1"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="fst-italic text-muted mb-4">
+              "I frequently need a driver for my BMW 7 Series during busy work weeks. DriveEase drivers treat the vehicle with utmost care, always arrive 15 minutes early, and drive smoothly in chaotic rush hour traffic."
+            </p>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=85" alt="Elena Rodriguez" class="client-avatar">
+              <div>
+                <h6 class="fw-bold mb-0">Elena Rodriguez</h6>
+                <div class="small text-muted">Managing Director, Apex Capital</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card h-100">
+            <div class="d-flex text-warning mb-3">
+              <i class="bi bi-star-fill me-1"></i><i class="bi bi-star-fill me-1"></i><i class="bi bi-star-fill me-1"></i><i class="bi bi-star-fill me-1"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="fst-italic text-muted mb-4">
+              "We booked an outstation driver for a 3-day family road trip to the mountain cabins. Liam was sensational! Safe on hairpin turns, courteous with my kids, and extremely knowledgeable about local routes."
+            </p>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=300&q=85" alt="Jonathan Ross" class="client-avatar">
+              <div>
+                <h6 class="fw-bold mb-0">Jonathan Ross</h6>
+                <div class="small text-muted">Architect & Family Traveler</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card h-100">
+            <div class="d-flex text-warning mb-3">
+              <i class="bi bi-star-fill me-1"></i><i class="bi bi-star-fill me-1"></i><i class="bi bi-star-fill me-1"></i><i class="bi bi-star-fill me-1"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="fst-italic text-muted mb-4">
+              "The customer dashboard is pure perfection. I can book an airport pickup at midnight, track the driver assignment in real time, and download formal business expense invoices with one click."
+            </p>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=300&q=85" alt="Tariq Mansoor" class="client-avatar">
+              <div>
+                <h6 class="fw-bold mb-0">Tariq Mansoor</h6>
+                <div class="small text-muted">Tech Consultant, CloudSphere</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion Section -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="text-center section-header">
+        <span class="section-subtitle"><i class="bi bi-question-circle"></i> Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Quick answers regarding driver background checks, booking policies, insurance, and billing.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion accordion-custom" id="faqAccordion">
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                  How thoroughly are your drivers vetted and background-checked?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Every driver undergoes a comprehensive 6-stage verification process including national and county criminal court record checks, Motor Vehicle Record (MVR) driving history checks with zero tolerance for major infractions, 5-panel drug screenings, government photo ID validation, and in-person defensive driving road examinations.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                  Can I book a driver for my own car, including manual and luxury cars?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, absolutely. Our service is designed specifically for vehicle owners who want professional chauffeurs to operate their personal or corporate cars. Our driver roster includes specialists with extensive experience driving manual gearboxes, high-end luxury European sedans, dual-motor electric vehicles, and heavy SUVs.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                  What happens if I need the driver for extra hours beyond my booking?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  You can easily extend your active booking directly from your customer dashboard or by informing the driver. Additional hours are charged at the standard flat hourly rate stated in your booking quote with zero emergency surge fees.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                  What is your cancellation and refund policy?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We offer 100% free cancellation up to 1 hour prior to your scheduled pickup time with an immediate full refund back to your payment method. If cancelled within 60 minutes of the trip, a nominal $15 driver dispatch fee is retained.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-5 bg-subtle">
+    <div class="container">
+      <div class="card-custom bg-primary text-white p-5 border-0 shadow-lg">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6">
+            <span class="badge bg-warning text-dark fw-bold mb-2">Member Discounts</span>
+            <h3 class="text-white fw-bold mb-2">Stay Connected With DriveEase</h3>
+            <p class="text-white-50 mb-0">Subscribe to receive exclusive monthly chauffeur discounts, corporate mobility insights, and seasonal road trip packages.</p>
+          </div>
+          <div class="col-lg-6">
+            <form class="newsletter-form">
+              <div class="input-group">
+                <input type="email" class="form-control form-control-lg newsletter-input" placeholder="Enter your business email..." required>
+                <button class="btn btn-accent btn-lg px-4" type="submit">
+                  <i class="bi bi-send-fill me-1"></i>Subscribe
+                </button>
+              </div>
+              <div class="small text-white-50 mt-2">
+                <i class="bi bi-lock me-1"></i>We respect your privacy. No spam, unsubscribe anytime.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Col 1: Bio & Socials -->
+        <div class="col-lg-3 col-md-6">
+          <a class="navbar-brand d-flex align-items-center gap-2 mb-3 text-decoration-none" href="index.html">
+            <div class="brand-logo-icon rounded-3 p-2 d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;">
+              <i class="bi bi-car-front-fill fs-4"></i>
+            </div>
+            <span class="navbar-brand-text">Drive<span>Ease</span></span>
+          </a>
+          <p class="footer-desc mb-4">
+            DriveEase is the premier commercial driver hire platform delivering certified, reliable, and discreet personal and corporate chauffeurs nationwide.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="blog.html">Travel Blog</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html?type=hourly">Hourly Driver</a></li>
+            <li><a href="service-details.html?type=chauffeur">Luxury Chauffeur</a></li>
+            <li><a href="service-details.html?type=corporate">Corporate Drivers</a></li>
+            <li><a href="service-details.html?type=airport">Airport Transfers</a></li>
+            <li><a href="service-details.html?type=outstation">Outstation Trips</a></li>
+            <li><a href="service-details.html?type=monthly">Monthly Dedicated</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Customer Portal -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5>Customer Portal</h5>
+          <ul class="footer-links mb-3">
+            <li><a href="dashboard/index.html">Dashboard Overview</a></li>
+            <li><a href="dashboard/book-driver.html">Book New Driver</a></li>
+            <li><a href="dashboard/my-bookings.html">Manage Bookings</a></li>
+            <li><a href="dashboard/driver-tracking.html">Live Tracking</a></li>
+            <li><a href="dashboard/invoices.html">Invoices & Receipts</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Email Inquiries & Hotline -->
+        <div class="col-lg-3 col-md-6 col-12">
+          <h5>Email Inquiries</h5>
+          <div class="footer-contact-box">
+            <div class="d-flex align-items-start gap-2 mb-2">
+              <i class="bi bi-envelope-at-fill text-warning mt-1 fs-5"></i>
+              <div>
+                <span class="small d-block text-muted">General Support</span>
+                <a href="mailto:support@driveease.com" class="fw-bold footer-contact-link">support@driveease.com</a>
+              </div>
+            </div>
+            <div class="d-flex align-items-start gap-2 mb-3">
+              <i class="bi bi-briefcase-fill text-primary mt-1 fs-5"></i>
+              <div>
+                <span class="small d-block text-muted">Corporate Contracts</span>
+                <a href="mailto:corporate@driveease.com" class="fw-bold footer-contact-link">corporate@driveease.com</a>
+              </div>
+            </div>
+            <div class="pt-2 border-top border-secondary-subtle">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-telephone-fill text-success fs-5"></i>
+                <div>
+                  <span class="small d-block text-muted">24/7 Hotline</span>
+                  <a href="tel:+18005553748" class="fw-bold footer-contact-link">+1 (800) 555-DRIVE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom text-center">
+        <div>
+          &copy; 2026 <strong>DriveEase Technologies Inc.</strong> All rights reserved. Built for ThemeForest & TemplateMonster.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/booking.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

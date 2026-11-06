@@ -1,0 +1,379 @@
+/* ===================================================================
+   DriveEase – Responsive Stylesheet
+   Mobile, Tablet, and Desktop Breakpoints
+   =================================================================== */
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1180px;
+  }
+}
+
+/* Extra Large Desktop (1400px and up) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* Medium & Small Laptops (992px to 1199px) */
+@media (max-width: 1199.98px) {
+  .hero-title {
+    font-size: 2.85rem;
+  }
+  .hero-img-main {
+    height: 440px;
+  }
+  .floating-stat-card {
+    padding: 0.75rem 1rem;
+  }
+  .dashboard-sidebar {
+    width: 250px;
+  }
+  .dashboard-main {
+    margin-left: 250px;
+  }
+}
+
+/* Tablets (768px to 991px) */
+@media (max-width: 991.98px) {
+  .hero-section-1 {
+    padding: 3.5rem 0 4rem 0;
+  }
+  .hero-img-main {
+    height: 380px;
+    margin-top: 2rem;
+  }
+  .booking-quick-box {
+    margin-top: 1rem;
+    padding: 1.5rem;
+  }
+  .floating-stat-card.stat-top {
+    left: 2%;
+  }
+  .floating-stat-card.stat-bottom {
+    right: 2%;
+  }
+  
+  /* Dashboard Mobile Drawer */
+  .dashboard-sidebar {
+    transform: translateX(-100%);
+    box-shadow: var(--shadow-xl);
+  }
+  .dashboard-sidebar.show {
+    transform: translateX(0);
+  }
+  .dashboard-main {
+    margin-left: 0 !important;
+  }
+  .sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1035;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-fast);
+  }
+  .sidebar-backdrop.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Mobile Phones (under 768px) */
+@media (max-width: 767.98px) {
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+  .section-title {
+    font-size: 1.85rem;
+  }
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .hero-img-main {
+    height: 300px;
+  }
+  .floating-stat-card {
+    position: static;
+    margin-top: 1rem;
+    width: 100%;
+    animation: none;
+  }
+  .dashboard-content {
+    padding: 1.25rem;
+  }
+  .dashboard-topbar {
+    padding: 0 1.25rem;
+  }
+  .kpi-value {
+    font-size: 1.65rem;
+  }
+  .pricing-card {
+    padding: 1.75rem 1.25rem;
+  }
+  .site-footer {
+    padding-top: 3.5rem;
+  }
+  
+  /* Tables on mobile */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Small mobile (under 576px) */
+@media (max-width: 575.98px) {
+  .btn-lg {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    width: 100%;
+  }
+  .hero-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .hero-btn-group .btn {
+    width: 100%;
+  }
+  .toast-container-custom {
+    left: 12px !important;
+    right: 12px !important;
+    bottom: 12px !important;
+  }
+  .toast-custom {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+/* Page & Home Hero Banner Responsive Enhancements */
+@media (max-width: 991.98px) {
+  .page-hero-banner,
+  .inner-hero-section,
+  .home-hero-banner {
+    min-height: auto;
+    padding: 5rem 0 4.5rem 0;
+  }
+  .page-hero-bg,
+  .home-hero-bg {
+    width: 100%;
+    opacity: 0.28;
+  }
+  .page-hero-blur,
+  .home-hero-blur {
+    display: none;
+  }
+  .page-hero-overlay,
+  .home-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.88) 100%
+    );
+  }
+  [data-bs-theme="dark"] .page-hero-overlay,
+  [data-bs-theme="dark"] .home-hero-overlay,
+  body.dark-theme .page-hero-overlay,
+  body.dark-theme .home-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(8, 13, 24, 0.96) 0%,
+      rgba(8, 13, 24, 0.92) 100%
+    ) !important;
+  }
+  .page-hero-title,
+  .inner-hero-title,
+  .home-hero-title {
+    font-size: 2.35rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-hero-banner,
+  .inner-hero-section,
+  .home-hero-banner {
+    padding: 4rem 0 3.5rem 0;
+  }
+  .page-hero-title,
+  .inner-hero-title,
+  .home-hero-title {
+    font-size: 1.85rem;
+  }
+  .page-hero-desc,
+  .inner-hero-subtitle,
+  .home-hero-desc {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===================================================================
+   Full-Spectrum Multi-Device Adaptations (Mobile, Tablet, Laptop)
+   Zero horizontal overflow, clean touch spacing & balanced card grids
+   =================================================================== */
+
+/* Universal Viewport Boundary Guard */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Mobile & Tablet Header Navigation Collapse */
+@media (max-width: 991.98px) {
+  .site-header .navbar-collapse {
+    background-color: var(--bg-white);
+    padding: 1.25rem 1.5rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    margin-top: 0.75rem;
+    box-shadow: 0 12px 36px rgba(15, 23, 42, 0.12);
+  }
+
+  [data-bs-theme="dark"] .site-header .navbar-collapse,
+  body.dark-theme .site-header .navbar-collapse {
+    background-color: #0E1626 !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45) !important;
+  }
+
+  .site-header .d-flex.align-items-center.gap-2 {
+    margin-top: 1rem !important;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--border-color);
+    flex-wrap: wrap;
+    gap: 0.5rem !important;
+  }
+
+  [data-bs-theme="dark"] .site-header .d-flex.align-items-center.gap-2,
+  body.dark-theme .site-header .d-flex.align-items-center.gap-2 {
+    border-top-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .btn-nav-login,
+  .btn-nav-register {
+    padding: 0.4rem 0.95rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* Booking Wizard Sticky Fare Summary switches to clean inline flow on tablet & mobile */
+  .sticky-fare-summary {
+    position: static !important;
+    top: auto !important;
+    margin-top: 1.5rem;
+  }
+}
+
+/* Tablets (768px to 991px) Grid & Banner Refinements */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-section-2 {
+    padding: 4.5rem 0 3.5rem 0;
+  }
+
+  .hero-section-2 h1 {
+    font-size: 2.35rem;
+  }
+
+  .driver-img-wrap {
+    height: 260px;
+  }
+
+  .table-pricing-matrix {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Devices (Under 768px) Touch Ergonomics & Card Symmetry */
+@media (max-width: 767.98px) {
+  .hero-section-2 {
+    padding: 3.5rem 0 2.5rem 0;
+  }
+
+  .hero-section-2 h1 {
+    font-size: 1.95rem;
+  }
+
+  .driver-img-wrap {
+    height: 250px;
+  }
+
+  .driver-body {
+    padding: 1.25rem 1rem !important;
+  }
+
+  .driver-body p {
+    min-height: auto !important;
+  }
+
+  /* Plan Comparison Matrix horizontal touch scroll without clipping */
+  .table-pricing-matrix {
+    min-width: 580px;
+  }
+
+  .table-pricing-matrix th,
+  .table-pricing-matrix td {
+    padding: 0.75rem 0.85rem !important;
+    font-size: 0.85rem !important;
+  }
+
+  .table-pricing-matrix thead th {
+    font-size: 0.82rem !important;
+    padding-top: 0.85rem !important;
+    padding-bottom: 0.85rem !important;
+  }
+
+  /* Booking Filter Tabs in Customer Dashboard */
+  .booking-filter-tabs-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+    gap: 0.35rem;
+  }
+
+  .booking-filter-tab {
+    white-space: nowrap;
+    font-size: 0.8rem !important;
+    padding: 0.38rem 0.85rem !important;
+  }
+
+  /* Quick Reservation Box on Mobile */
+  .booking-quick-box {
+    margin-top: 1rem;
+    padding: 1.25rem;
+  }
+}
+
+/* Small Screens (Under 420px) Micro-adjustments */
+@media (max-width: 419.98px) {
+  .navbar-brand-text {
+    font-size: 1.25rem;
+  }
+
+  .btn-nav-login,
+  .btn-nav-register {
+    padding: 0.35rem 0.75rem !important;
+    font-size: 0.84rem !important;
+  }
+
+  .switch-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .article-share-tags-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.85rem !important;
+  }
+}

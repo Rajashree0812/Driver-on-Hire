@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DriveEase Customer Dashboard - Monitor driver bookings, track assignments, and view invoices.">
+  <title>Customer Dashboard Overview – DriveEase</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232999E8'><path d='M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z'/></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- Fixed Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+          <div class="brand-logo-icon rounded-3 p-2 d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;">
+            <i class="bi bi-car-front-fill fs-5"></i>
+          </div>
+          <span class="navbar-brand-text text-white fs-4">Drive<span>Ease</span></span>
+        </a>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="sidebar-menu-title">Main Menu</li>
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active">
+            <i class="bi bi-speedometer2"></i>
+            <span>Dashboard Overview</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="book-driver.html" class="nav-link">
+            <i class="bi bi-calendar2-plus"></i>
+            <span>Book a Driver</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="my-bookings.html" class="nav-link">
+            <i class="bi bi-calendar-check"></i>
+            <span>My Bookings</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="driver-tracking.html" class="nav-link">
+            <i class="bi bi-geo-alt"></i>
+            <span>Track Assignment</span>
+          </a>
+        </li>
+
+        <li class="sidebar-menu-title">Financials</li>
+        <li class="nav-item">
+          <a href="invoices.html" class="nav-link">
+            <i class="bi bi-receipt"></i>
+            <span>Invoice List</span>
+          </a>
+        </li>
+
+        <li class="sidebar-menu-title">Preferences</li>
+        <li class="nav-item">
+          <a href="profile.html" class="nav-link">
+            <i class="bi bi-person"></i>
+            <span>Customer Profile</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="settings.html" class="nav-link">
+            <i class="bi bi-gear"></i>
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- User Profile at Sidebar Footer -->
+      <div class="sidebar-user-footer">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Customer Avatar" class="sidebar-user-avatar current-user-avatar">
+        <div class="overflow-hidden">
+          <div class="fw-bold small text-white text-truncate current-user-name">Alex Morgan</div>
+          <div class="small text-white-50" style="font-size: 0.75rem;">Premium Member</div>
+        </div>
+        <a href="#" class="btn-do-logout ms-auto text-white-50 hover-text-white" title="Sign Out">
+          <i class="bi bi-box-arrow-right fs-5"></i>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="dashboard-main">
+      <!-- Topbar Navigation -->
+      <header class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-outline-secondary d-lg-none" id="sidebarToggleBtn" type="button" aria-label="Toggle Sidebar">
+            <i class="bi bi-list fs-5"></i>
+          </button>
+          <div class="d-none d-md-flex align-items-center gap-2 text-muted small">
+            <a href="../index.html" class="text-decoration-none text-muted">Home</a>
+            <i class="bi bi-chevron-right fs-6"></i>
+            <span class="text-primary fw-semibold">Dashboard Overview</span>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <!-- Quick Search -->
+          <div class="d-none d-md-block me-2">
+            <div class="input-group input-group-sm" style="width: 220px;">
+              <span class="input-group-text bg-light border-end-0"><i class="bi bi-search text-muted"></i></span>
+              <input type="text" class="form-control border-start-0" placeholder="Search bookings...">
+            </div>
+          </div>
+
+          <!-- Theme Toggle -->
+          <button class="switch-btn theme-toggle-btn" type="button" aria-label="Toggle Theme" title="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="switch-btn rtl-toggle-btn" type="button" aria-label="Toggle RTL" title="Toggle RTL">
+            <span class="dir-label small fw-bold">LTR</span>
+          </button>
+
+          <!-- Notification Dropdown -->
+          <div class="dropdown">
+            <button class="switch-btn position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="bi bi-bell"></i>
+              <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow p-3" style="width: 300px;">
+              <li class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+                <strong class="small text-dark">Notifications (2)</strong>
+                <a href="#" class="small text-muted text-decoration-none">Mark read</a>
+              </li>
+              <li class="mb-2">
+                <a href="driver-tracking.html?id=DE-90412" class="d-flex gap-2 text-decoration-none text-dark">
+                  <i class="bi bi-car-front text-primary fs-5"></i>
+                  <div>
+                    <div class="small fw-bold">Driver Assigned for Trip #DE-90412</div>
+                    <div class="text-muted" style="font-size: 0.72rem;">Robert Vance is scheduled for 09:00 AM.</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="invoices.html" class="d-flex gap-2 text-decoration-none text-dark">
+                  <i class="bi bi-receipt text-success fs-5"></i>
+                  <div>
+                    <div class="small fw-bold">Invoice Ready for Trip #DE-81092</div>
+                    <div class="text-muted" style="font-size: 0.72rem;">$95.04 receipt paid successfully.</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- User Pill Dropdown -->
+          <div class="dropdown ms-2">
+            <button class="btn btn-sm d-flex align-items-center gap-2 p-1 border rounded-pill bg-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Avatar" class="rounded-circle current-user-avatar" style="width: 32px; height: 32px; object-fit: cover;">
+              <span class="small fw-bold d-none d-sm-inline me-1 current-user-name">Alex Morgan</span>
+              <i class="bi bi-chevron-down small text-muted me-1"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow">
+              <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2 text-primary"></i>My Profile</a></li>
+              <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2 text-secondary"></i>Account Settings</a></li>
+              <li><a class="dropdown-item" href="../index.html"><i class="bi bi-globe me-2 text-info"></i>Visit Website</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger btn-do-logout" href="#"><i class="bi bi-box-arrow-right me-2"></i>Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Content -->
+      <main class="dashboard-content">
+        <!-- Welcome Hero Strip -->
+        <div class="card-custom bg-primary text-white p-4 mb-4 border-0 shadow">
+          <div class="row align-items-center gy-3">
+            <div class="col-md-8">
+              <span class="badge bg-warning text-dark fw-bold mb-1">Executive Concierge Ready</span>
+              <h3 class="text-white fw-bold mb-1">Welcome Back, <span class="current-user-name">Alex</span>!</h3>
+              <p class="text-white-50 small mb-0">You have 1 driver assigned for today. Need an extra driver for errands or airport drop-off?</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+              <a href="book-driver.html" class="btn btn-accent fw-bold shadow">
+                <i class="bi bi-plus-circle me-1"></i>Book a Driver Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 KPI Cards -->
+        <div class="row g-4 mb-4">
+          <!-- Total Bookings -->
+          <div class="col-sm-6 col-xl-3">
+            <div class="kpi-card">
+              <div>
+                <div class="kpi-title">Total Bookings</div>
+                <div class="kpi-value" id="kpiTotalBookings">5</div>
+                <div class="small text-success mt-2"><i class="bi bi-arrow-up-right me-1"></i>+12% this month</div>
+              </div>
+              <div class="kpi-icon-wrap bg-primary-subtle text-primary">
+                <i class="bi bi-car-front-fill"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upcoming Bookings -->
+          <div class="col-sm-6 col-xl-3">
+            <div class="kpi-card">
+              <div>
+                <div class="kpi-title">Upcoming Trips</div>
+                <div class="kpi-value text-secondary" id="kpiUpcomingBookings">2</div>
+                <div class="small text-primary mt-2"><i class="bi bi-clock me-1"></i>Next trip in 2 days</div>
+              </div>
+              <div class="kpi-icon-wrap bg-info-subtle text-info">
+                <i class="bi bi-calendar-event-fill"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Completed Bookings -->
+          <div class="col-sm-6 col-xl-3">
+            <div class="kpi-card">
+              <div>
+                <div class="kpi-title">Completed</div>
+                <div class="kpi-value text-success" id="kpiCompletedBookings">2</div>
+                <div class="small text-muted mt-2"><i class="bi bi-shield-check me-1"></i>100% Satisfied</div>
+              </div>
+              <div class="kpi-icon-wrap bg-success-subtle text-success">
+                <i class="bi bi-check-circle-fill"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cancelled Bookings -->
+          <div class="col-sm-6 col-xl-3">
+            <div class="kpi-card">
+              <div>
+                <div class="kpi-title">Cancelled</div>
+                <div class="kpi-value text-danger" id="kpiCancelledBookings">1</div>
+                <div class="small text-muted mt-2">Refunded to card</div>
+              </div>
+              <div class="kpi-icon-wrap bg-danger-subtle text-danger">
+                <i class="bi bi-x-circle-fill"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Middle Row: Chart & Next Assignment Highlight -->
+        <div class="row g-4 mb-4">
+          <!-- Booking Activity Chart -->
+          <div class="col-lg-8">
+            <div class="card-custom h-100 p-4">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                  <h5 class="fw-bold mb-0">Booking Activity & Usage Trends</h5>
+                  <p class="text-muted small mb-0">Monthly driver hire hours completed across 2026</p>
+                </div>
+                <span class="badge badge-soft-primary"><i class="bi bi-graph-up me-1"></i>+24% YoY</span>
+              </div>
+              <div class="chart-container" style="position: relative; width: 100%; height: 240px;">
+                <canvas id="bookingActivityChart"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Next Upcoming Assignment Card -->
+          <div class="col-lg-4">
+            <div class="card-custom h-100 p-4 border-2 border-secondary">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h6 class="fw-bold text-uppercase text-secondary small mb-0">
+                  <i class="bi bi-broadcast me-1"></i>Active Assignment
+                </h6>
+                <span class="badge badge-soft-primary">Upcoming</span>
+              </div>
+
+              <div class="d-flex align-items-center gap-3 mb-3 p-3 bg-light rounded-3">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=85" alt="Robert Vance" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover;">
+                <div>
+                  <h6 class="fw-bold mb-0">Robert Vance</h6>
+                  <div class="small text-warning fw-bold"><i class="bi bi-star-fill me-1"></i>4.95 (214 Trips)</div>
+                  <div class="small text-muted">Mercedes-Benz S-Class</div>
+                </div>
+              </div>
+
+              <div class="small text-muted mb-3">
+                <div class="mb-2 text-truncate">
+                  <i class="bi bi-geo-alt-fill text-danger me-1"></i>Pickup: <strong>The Ritz-Carlton</strong>
+                </div>
+                <div class="mb-2 text-truncate">
+                  <i class="bi bi-pin-map-fill text-primary me-1"></i>Drop: <strong>Financial District</strong>
+                </div>
+                <div>
+                  <i class="bi bi-clock-history text-secondary me-1"></i>Date: <strong>Nov 10, 2026 (09:00 AM)</strong>
+                </div>
+              </div>
+
+              <div class="d-grid gap-2">
+                <a href="driver-tracking.html?id=DE-90412" class="btn btn-secondary btn-sm">
+                  <i class="bi bi-geo-alt-fill me-1"></i>Track Driver Status
+                </a>
+                <a href="booking-details.html?id=DE-90412" class="btn btn-outline-primary btn-sm">
+                  <i class="bi bi-eye me-1"></i>Trip Details
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Bookings Table -->
+        <div class="card-custom p-0 overflow-hidden border">
+          <div class="p-4 d-flex flex-wrap justify-content-between align-items-center gap-2 border-bottom">
+            <div>
+              <h5 class="fw-bold mb-0">Recent Driver Bookings</h5>
+              <p class="text-muted small mb-0">Latest driver hire requests and their operational status</p>
+            </div>
+            <a href="my-bookings.html" class="btn btn-sm btn-outline-primary">
+              View All Bookings <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-custom mb-0">
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Chauffeur</th>
+                  <th>Pickup Location</th>
+                  <th>Schedule</th>
+                  <th>Total Amount</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="recentBookingsTableBody">
+                <!-- Populated dynamically by assets/js/dashboard.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+  <script src="../assets/js/validation.js"></script>
+  <script src="../assets/js/booking.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

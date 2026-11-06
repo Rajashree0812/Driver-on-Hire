@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Live driver assignment tracking simulation with status timeline and arrival ETA countdown.">
+  <title>Driver Assignment Tracking – DriveEase Customer Dashboard</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232999E8'><path d='M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z'/></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+          <div class="brand-logo-icon rounded-3 p-2 d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;">
+            <i class="bi bi-car-front-fill fs-5"></i>
+          </div>
+          <span class="navbar-brand-text text-white fs-4">Drive<span>Ease</span></span>
+        </a>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="sidebar-menu-title">Main Menu</li>
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">
+            <i class="bi bi-speedometer2"></i>
+            <span>Dashboard Overview</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="book-driver.html" class="nav-link">
+            <i class="bi bi-calendar2-plus"></i>
+            <span>Book a Driver</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="my-bookings.html" class="nav-link">
+            <i class="bi bi-calendar-check"></i>
+            <span>My Bookings</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="driver-tracking.html" class="nav-link active">
+            <i class="bi bi-geo-alt"></i>
+            <span>Track Assignment</span>
+          </a>
+        </li>
+
+        <li class="sidebar-menu-title">Financials</li>
+        <li class="nav-item">
+          <a href="invoices.html" class="nav-link">
+            <i class="bi bi-receipt"></i>
+            <span>Invoice List</span>
+          </a>
+        </li>
+
+        <li class="sidebar-menu-title">Preferences</li>
+        <li class="nav-item">
+          <a href="profile.html" class="nav-link">
+            <i class="bi bi-person"></i>
+            <span>Customer Profile</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="settings.html" class="nav-link">
+            <i class="bi bi-gear"></i>
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-user-footer">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Customer Avatar" class="sidebar-user-avatar current-user-avatar">
+        <div class="overflow-hidden">
+          <div class="fw-bold small text-white text-truncate current-user-name">Alex Morgan</div>
+          <div class="small text-white-50" style="font-size: 0.75rem;">Premium Member</div>
+        </div>
+        <a href="#" class="btn-do-logout ms-auto text-white-50 hover-text-white" title="Sign Out">
+          <i class="bi bi-box-arrow-right fs-5"></i>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-outline-secondary d-lg-none" id="sidebarToggleBtn" type="button" aria-label="Toggle Sidebar">
+            <i class="bi bi-list fs-5"></i>
+          </button>
+          <div class="d-none d-md-flex align-items-center gap-2 text-muted small">
+            <a href="index.html" class="text-decoration-none text-muted">Dashboard</a>
+            <i class="bi bi-chevron-right fs-6"></i>
+            <span class="text-primary fw-semibold">Track Driver Assignment</span>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="switch-btn theme-toggle-btn" type="button" aria-label="Toggle Theme" title="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <button class="switch-btn rtl-toggle-btn" type="button" aria-label="Toggle RTL" title="Toggle RTL">
+            <span class="dir-label small fw-bold">LTR</span>
+          </button>
+
+          <div class="dropdown ms-2">
+            <button class="btn btn-sm d-flex align-items-center gap-2 p-1 border rounded-pill bg-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Avatar" class="rounded-circle current-user-avatar" style="width: 32px; height: 32px; object-fit: cover;">
+              <span class="small fw-bold d-none d-sm-inline me-1 current-user-name">Alex Morgan</span>
+              <i class="bi bi-chevron-down small text-muted me-1"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow">
+              <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2 text-primary"></i>My Profile</a></li>
+              <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2 text-secondary"></i>Account Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger btn-do-logout" href="#"><i class="bi bi-box-arrow-right me-2"></i>Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main class="dashboard-content">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+          <div>
+            <h3 class="fw-extrabold text-primary mb-1">Live Driver Assignment Tracking</h3>
+            <p class="text-muted small mb-0">Follow chauffeur progress and estimated arrival in real time.</p>
+          </div>
+          <span class="badge badge-soft-warning px-3 py-2 small">
+            <i class="bi bi-info-circle me-1"></i>Simulation Mode Active (Sample Tracking)
+          </span>
+        </div>
+
+        <!-- Simulation Stage Controller Bar -->
+        <div class="card-custom p-3 mb-4 bg-light border">
+          <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+            <div class="small fw-bold text-dark">
+              <i class="bi bi-play-circle-fill text-primary me-1"></i>Interactive Demo: Simulate Driver Progression:
+            </div>
+            <div class="btn-group btn-group-sm flex-wrap" role="group">
+              <button type="button" class="btn btn-outline-primary sim-stage-btn" data-stage="0">1. Assigned</button>
+              <button type="button" class="btn btn-outline-primary sim-stage-btn active" data-stage="1">2. En Route</button>
+              <button type="button" class="btn btn-outline-primary sim-stage-btn" data-stage="2">3. Arrived</button>
+              <button type="button" class="btn btn-outline-primary sim-stage-btn" data-stage="3">4. In Progress</button>
+              <button type="button" class="btn btn-outline-primary sim-stage-btn" data-stage="4">5. Completed</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Left Column: Status Banner & Timeline -->
+          <div class="col-lg-7">
+            <!-- Active Stage Status Highlight Card -->
+            <div class="card-custom bg-primary text-white p-4 mb-4 shadow">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div>
+                  <span class="badge bg-warning text-dark fw-bold mb-2">Live Trip #<span id="trackBookingId">DE-90412</span></span>
+                  <h4 class="text-white fw-bold mb-1" id="trackCurrentStageName">En Route to Pickup</h4>
+                  <p class="text-white-50 small mb-0">Chauffeur is navigating through city traffic to your location.</p>
+                </div>
+                <div class="text-end">
+                  <span class="badge bg-white text-primary fw-bold fs-6 px-3 py-2" id="trackEta">11 mins away</span>
+                </div>
+              </div>
+
+              <!-- Animated progress bar -->
+              <div class="progress bg-white bg-opacity-25" style="height: 8px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 45%;"></div>
+              </div>
+            </div>
+
+            <!-- Tracking Timeline -->
+            <div class="card-custom p-4 mb-4">
+              <h5 class="fw-bold mb-4 pb-2 border-bottom"><i class="bi bi-clock-history text-secondary me-2"></i>Assignment Milestones</h5>
+
+              <div class="tracking-timeline">
+                <div class="tracking-step completed">
+                  <div class="tracking-step-dot"><i class="bi bi-check"></i></div>
+                  <h6 class="fw-bold mb-1">Driver Assigned & Confirmed</h6>
+                  <p class="small text-muted mb-0">Driver verified identity and accepted reservation. Vehicle checklist completed.</p>
+                  <span class="small text-muted" style="font-size: 0.72rem;">08:15 AM</span>
+                </div>
+
+                <div class="tracking-step current">
+                  <div class="tracking-step-dot"><i class="bi bi-record-circle"></i></div>
+                  <h6 class="fw-bold text-primary mb-1">En Route to Pickup</h6>
+                  <p class="small text-muted mb-0">Chauffeur has departed hub and is driving to your pickup address.</p>
+                  <span class="small text-muted" style="font-size: 0.72rem;">08:42 AM (In progress)</span>
+                </div>
+
+                <div class="tracking-step">
+                  <div class="tracking-step-dot">3</div>
+                  <h6 class="fw-bold mb-1">Arrived at Pickup Location</h6>
+                  <p class="small text-muted mb-0">Driver parks at front entrance and coordinates curbside handover.</p>
+                </div>
+
+                <div class="tracking-step">
+                  <div class="tracking-step-dot">4</div>
+                  <h6 class="fw-bold mb-1">Journey in Progress</h6>
+                  <p class="small text-muted mb-0">Key handed over. Chauffeur actively driving passenger towards destinations.</p>
+                </div>
+
+                <div class="tracking-step">
+                  <div class="tracking-step-dot">5</div>
+                  <h6 class="fw-bold mb-1">Trip Successfully Completed</h6>
+                  <p class="small text-muted mb-0">Arrived at final stop. Vehicle safely parked, keys returned, and invoice closed.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Driver Profile Card & Simulated Radar -->
+          <div class="col-lg-5">
+            <!-- Driver Card -->
+            <div class="card-custom p-4 mb-4">
+              <h5 class="fw-bold mb-3 pb-2 border-bottom"><i class="bi bi-person-badge text-primary me-2"></i>Chauffeur Contact Card</h5>
+
+              <div class="text-center mb-4">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=85" alt="Chauffeur" id="trackDriverAvatar" class="rounded-circle border border-4 border-light shadow mb-3" style="width: 100px; height: 100px; object-fit: cover;">
+                <h4 class="fw-bold text-dark mb-1" id="trackDriverName">Robert Vance</h4>
+                <div class="small text-warning fw-bold mb-2" id="trackDriverRating">4.95 ★</div>
+                <div class="badge badge-soft-success px-3 py-1"><i class="bi bi-shield-check me-1"></i>Verified Senior Chauffeur</div>
+              </div>
+
+              <div class="p-3 bg-light rounded-3 small mb-3">
+                <div class="d-flex justify-content-between mb-2">
+                  <span class="text-muted">Direct Mobile:</span>
+                  <strong class="text-dark" id="trackDriverPhone">+1 (555) 349-8812</strong>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span class="text-muted">Assigned Vehicle:</span>
+                  <strong class="text-dark" id="trackVehicle">Mercedes-Benz S-Class</strong>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span class="text-muted">Uniform Code:</span>
+                  <strong class="text-dark">Formal Suit & Tie</strong>
+                </div>
+              </div>
+
+              <div class="row g-2">
+                <div class="col-6">
+                  <button type="button" class="btn btn-outline-primary w-100" id="btnCallDriver">
+                    <i class="bi bi-telephone-fill me-1"></i>Call Chauffeur
+                  </button>
+                </div>
+                <div class="col-6">
+                  <button type="button" class="btn btn-outline-secondary w-100" id="btnMessageDriver">
+                    <i class="bi bi-chat-text-fill me-1"></i>Send SMS
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Simulated Proximity Radar Box -->
+            <div class="card-custom p-4 text-center bg-subtle border">
+              <i class="bi bi-radar text-secondary mb-2" style="font-size: 2.5rem;"></i>
+              <h6 class="fw-bold text-dark mb-1">Simulated GPS Proximity Radar</h6>
+              <p class="small text-muted mb-2">Driver is 2.4 miles away, approaching via Park Avenue.</p>
+              <div class="badge bg-light text-muted border small">GPS Refresh: Every 15 seconds</div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+  <script src="../assets/js/validation.js"></script>
+  <script src="../assets/js/booking.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
